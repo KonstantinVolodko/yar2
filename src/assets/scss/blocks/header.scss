@@ -1,0 +1,115 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 10rem;
+    position: fixed;
+    background: $dark;
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transition: transform .8s;
+    @include breakpoint($sm-bp) {
+        padding: 4.094rem 3.073rem;
+    }
+}
+
+.hide-header {
+    transform: translateY(-105%);
+}
+.header__logo_img {
+    width: 12.1rem;
+    @include breakpoint($sm-bp) {
+        width: 14.1rem;
+    }
+}
+.header__menu-wrap {
+    display: flex;
+    align-items: center;
+}
+.header__menu_list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    @include breakpoint($sm-bp) {
+        display: none;
+    }
+}
+.header__menu_item {
+    list-style: none;
+    font-family: "Gilroy";
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 2.7rem;
+    letter-spacing: 0;
+    text-align: left;
+    margin-left: 4rem;
+    a {
+        color: white;
+        text-decoration: none;
+        transition: color .6s;
+    }
+    &:hover,
+    &:focus,
+    &:active {
+        a {
+            color: $orange;
+        }
+    }
+    &:visited {
+        a {
+            color: white;
+        }
+    }
+}
+.header__menu_burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-left: 10rem;
+    height: 1.1rem;
+    width: 3rem;
+    position: relative;
+    padding: 2rem;
+    cursor: pointer;
+    @include breakpoint($sm-bp) {
+        padding: 3rem;
+    }
+    &:hover,
+    &:focus,
+    &:active {
+        .menu__burger_line {
+            &:nth-child(2) {
+                width: 3rem;
+            }    
+        }
+    }
+}
+
+.menu__burger_line {
+    display: block;
+    width: 3rem;
+    height: 1px;
+    background: white;
+    transition: .4s;
+    position: absolute;
+    top: 2rem;
+    right: 0;
+    @include breakpoint($sm-bp) {
+        width: 6rem;
+    }
+    &:nth-child(2) {
+        width: 2rem;
+        top: unset;
+        bottom: 2rem;
+        @include breakpoint($sm-bp) {
+            width: 4rem;
+            bottom: 2.5rem;
+        }
+    }
+}
+

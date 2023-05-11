@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="robots" content="index, follow">
+  <meta name="description" content="">
+  <title>Разработка сайтов</title>
+  <link rel="stylesheet" href="assets/vendor/swiper/swiper.min.css">
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+  />
+  <link rel="stylesheet" href="assets/css/style.min.css">
+  
+  <!-- <link rel="preload" href="my-resource" as="fetch" onload="setTimeout(function(){
+    document.querySelector('.preloader').classList.add('loaderHidden')
+    document.body.style.overflow = 'auto'
+  }, 2500)"> -->
+</head>
+
+<body>
+  <header class="header">
+      <a href="#" class="header__logo">
+          <svg class="header__logo_img" viewBox="0 0 121 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="logo-ya" d="M24.5348 0.0539939H43.3683V15.8998H27.7698C22.3888 15.8998 21.7482 20.6376 22.1006 23.0065C21.7418 30.0491 29.745 30.6359 33.7914 30.0491V45.4147L21.3959 69.9998H0L15.2141 43.0138C7.38996 40.1732 4.88329 34.1183 4.10665 32.2424L4.09981 32.2259C3.3311 30.3692 2.46629 23.9028 2.62644 21.758C2.78659 19.6132 2.24209 11.3222 7.94339 5.27192C12.5044 0.431733 20.9048 -0.223442 24.5348 0.0539939Z" fill="#FFB500"/>
+              <path class="logo-r" fill-rule="evenodd" clip-rule="evenodd" d="M43.4321 0.0538447H79.818C86.3414 -0.38365 99.4971 2.56997 99.9327 17.8844C100.477 37.0275 97.7226 40.1326 91.1565 43.3658C89.3522 44.1021 83.7256 45.5426 75.6541 45.4146C67.5826 45.2865 50.8097 45.3612 43.4321 45.4146V0.0538447ZM43.4321 53.3215H60.0876V69.9996H43.4321V53.3215ZM59.9596 15.8599V29.9451H72.9957C78.1525 29.9451 81.1004 29.6872 81.2594 23.5427C81.4467 16.3027 76.368 16.0294 73.4419 15.872C73.3664 15.8679 73.2924 15.8639 73.2199 15.8599H59.9596Z" fill="white"/>
+              <path class="logo-name2" d="M70.4615 57.58H66.6622V67.397H64.726V57.58H61V56H70.4615V57.58Z" fill="white"/>
+              <path class="logo-name3" d="M76.176 64.5425L78.8135 56H80.8858L76.333 69.156C75.6283 71.052 74.5084 72 72.9734 72L72.607 71.9684L71.8849 71.8315V70.2515L72.4082 70.2936C73.0641 70.2936 73.5734 70.1602 73.9363 69.8934C74.3061 69.6265 74.6096 69.1385 74.8468 68.4292L75.2759 67.2706L71.236 56H73.3501L76.176 64.5425Z" fill="white"/>
+              <path class="logo-name4" d="M81.9429 65.8065L82.6127 64.9743C83.3663 63.9912 83.7954 62.5166 83.9001 60.5504L84.078 56H91.373V65.8065H92.8278V70.7465H90.8915V67.397H82.9895V70.7465H81.0533L81.0637 65.8065H81.9429ZM84.235 65.8065H89.4367V57.8012H85.9515L85.8363 60.5188C85.7177 62.7869 85.184 64.5495 84.235 65.8065Z" fill="white"/>
+              <path class="logo-name5" d="M102.3 56H104.236V67.397H102.3V59.0862L97.0771 67.397H95.1408V56H97.0771V64.3213L102.3 56Z" fill="white"/>
+              <path class="logo-name6" d="M116 56V67.397H114.053V62.9625H111.133L108.464 67.397H106.371L109.218 62.6675C108.492 62.4007 107.934 61.9899 107.543 61.4352C107.16 60.8734 106.968 60.2203 106.968 59.476C106.968 58.4367 107.355 57.6011 108.129 56.9691C108.904 56.33 109.94 56.007 111.238 56H116ZM108.914 59.497C108.914 60.0518 109.103 60.5012 109.48 60.8453C109.856 61.1824 110.355 61.3544 110.976 61.3614H114.053V57.58H111.269C110.551 57.58 109.978 57.7591 109.553 58.1172C109.127 58.4683 108.914 58.9282 108.914 59.497Z" fill="white"/>
+              <path class="logo-name1" d="M53.2851 65.5196C54.0088 65.5196 54.6411 65.3235 55.182 64.9314C55.723 64.5392 56.0227 64.049 56.0811 63.4608H58C57.9635 64.0686 57.7295 64.6471 57.2982 65.1961C56.867 65.7451 56.2895 66.183 55.5658 66.5098C54.8494 66.8366 54.0892 67 53.2851 67C51.6696 67 50.383 66.5196 49.4254 65.5588C48.4751 64.5915 48 63.2712 48 61.598V61.2941C48 60.2614 48.212 59.3431 48.636 58.5392C49.0599 57.7353 49.6667 57.1111 50.4561 56.6667C51.2529 56.2222 52.1923 56 53.2741 56C54.6045 56 55.7083 56.3562 56.5855 57.0686C57.47 57.781 57.9415 58.7059 58 59.8431H56.0811C56.0227 59.1569 55.7303 58.5948 55.2039 58.1569C54.6849 57.7124 54.0417 57.4902 53.2741 57.4902C52.2434 57.4902 51.443 57.8235 50.8728 58.4902C50.3099 59.1503 50.0285 60.1078 50.0285 61.3627V61.7059C50.0285 62.9281 50.3099 63.8693 50.8728 64.5294C51.4357 65.1895 52.2398 65.5196 53.2851 65.5196Z" fill="#27272E"/>
+          </svg>
+      </a>
+      <div class="header__menu-wrap">
+          <ul class="header__menu_list">
+              <li class="header__menu_item">
+                  <a class="header__menu_link" href="#">Сайт под ключ</a>
+              </li>
+              <li class="header__menu_item">
+                  <a class="header__menu_link" href="#">Дизайн</a>
+              </li>
+              <li class="header__menu_item">
+                  <a class="header__menu_link" href="#">Верстка</a>
+              </li>
+              <li class="header__menu_item">
+                  <a class="header__menu_link" href="#">Разработка</a>
+              </li>
+              <li class="header__menu_item">
+                  <a class="header__menu_link" href="#">SEO-продвижение</a>
+              </li>
+              <li class="header__menu_item">
+                  <a class="header__menu_link" href="#">Портфолио</a>
+              </li>
+          </ul>
+          <div class="header__menu_burger">
+              <span class="menu__burger_line"></span>
+              <span class="menu__burger_line"></span>
+          </div>    
+      </div>
+  </header>  <div class="burger-menu">
+      <div class="burger-menu__top">
+          <svg class="burger-menu__logo" viewBox="0 0 121 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24.5348 0.0539939H43.3683V15.8998H27.7698C22.3888 15.8998 21.7482 20.6376 22.1006 23.0065C21.7418 30.0491 29.745 30.6359 33.7914 30.0491V45.4147L21.3959 69.9998H0L15.2141 43.0138C7.38996 40.1732 4.88329 34.1183 4.10665 32.2424L4.09981 32.2259C3.3311 30.3692 2.46629 23.9028 2.62644 21.758C2.78659 19.6132 2.24209 11.3222 7.94339 5.27192C12.5044 0.431733 20.9048 -0.223442 24.5348 0.0539939Z" fill="#FFB500"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M43.4321 0.0538447H79.818C86.3414 -0.38365 99.4971 2.56997 99.9327 17.8844C100.477 37.0275 97.7226 40.1326 91.1565 43.3658C89.3522 44.1021 83.7256 45.5426 75.6541 45.4146C67.5826 45.2865 50.8097 45.3612 43.4321 45.4146V0.0538447ZM43.4321 53.3215H60.0876V69.9996H43.4321V53.3215ZM59.9596 15.8599V29.9451H72.9957C78.1525 29.9451 81.1004 29.6872 81.2594 23.5427C81.4467 16.3027 76.368 16.0294 73.4419 15.872C73.3664 15.8679 73.2924 15.8639 73.2199 15.8599H59.9596Z" fill="white"/>
+              <path d="M70.4615 57.58H66.6622V67.397H64.726V57.58H61V56H70.4615V57.58Z" fill="white"/>
+              <path d="M76.176 64.5425L78.8135 56H80.8858L76.333 69.156C75.6283 71.052 74.5084 72 72.9734 72L72.607 71.9684L71.8849 71.8315V70.2515L72.4082 70.2936C73.0641 70.2936 73.5734 70.1602 73.9363 69.8934C74.3061 69.6265 74.6096 69.1385 74.8468 68.4292L75.2759 67.2706L71.236 56H73.3501L76.176 64.5425Z" fill="white"/>
+              <path d="M81.9429 65.8065L82.6127 64.9743C83.3663 63.9912 83.7954 62.5166 83.9001 60.5504L84.078 56H91.373V65.8065H92.8278V70.7465H90.8915V67.397H82.9895V70.7465H81.0533L81.0637 65.8065H81.9429ZM84.235 65.8065H89.4367V57.8012H85.9515L85.8363 60.5188C85.7177 62.7869 85.184 64.5495 84.235 65.8065Z" fill="white"/>
+              <path d="M102.3 56H104.236V67.397H102.3V59.0862L97.0771 67.397H95.1408V56H97.0771V64.3213L102.3 56Z" fill="white"/>
+              <path d="M116 56V67.397H114.053V62.9625H111.133L108.464 67.397H106.371L109.218 62.6675C108.492 62.4007 107.934 61.9899 107.543 61.4352C107.16 60.8734 106.968 60.2203 106.968 59.476C106.968 58.4367 107.355 57.6011 108.129 56.9691C108.904 56.33 109.94 56.007 111.238 56H116ZM108.914 59.497C108.914 60.0518 109.103 60.5012 109.48 60.8453C109.856 61.1824 110.355 61.3544 110.976 61.3614H114.053V57.58H111.269C110.551 57.58 109.978 57.7591 109.553 58.1172C109.127 58.4683 108.914 58.9282 108.914 59.497Z" fill="white"/>
+              <path d="M53.2851 65.5196C54.0088 65.5196 54.6411 65.3235 55.182 64.9314C55.723 64.5392 56.0227 64.049 56.0811 63.4608H58C57.9635 64.0686 57.7295 64.6471 57.2982 65.1961C56.867 65.7451 56.2895 66.183 55.5658 66.5098C54.8494 66.8366 54.0892 67 53.2851 67C51.6696 67 50.383 66.5196 49.4254 65.5588C48.4751 64.5915 48 63.2712 48 61.598V61.2941C48 60.2614 48.212 59.3431 48.636 58.5392C49.0599 57.7353 49.6667 57.1111 50.4561 56.6667C51.2529 56.2222 52.1923 56 53.2741 56C54.6045 56 55.7083 56.3562 56.5855 57.0686C57.47 57.781 57.9415 58.7059 58 59.8431H56.0811C56.0227 59.1569 55.7303 58.5948 55.2039 58.1569C54.6849 57.7124 54.0417 57.4902 53.2741 57.4902C52.2434 57.4902 51.443 57.8235 50.8728 58.4902C50.3099 59.1503 50.0285 60.1078 50.0285 61.3627V61.7059C50.0285 62.9281 50.3099 63.8693 50.8728 64.5294C51.4357 65.1895 52.2398 65.5196 53.2851 65.5196Z" fill="#27272E"/>
+          </svg>
+          <div class="burger-menu__close">
+              <span class="burger-menu__close_line"></span>
+              <span class="burger-menu__close_line"></span>
+          </div>    
+      </div>
+      <a class="mobile btn" href="#">
+          Перейти в портфолио
+      </a>
+      <div class="burger__mob">
+          <div class="burger__services">
+              <p class="text-normal">
+                  Услуги
+              </p>
+              <ul class="burger__services_list">
+                  <li class="burger__services_item">
+                      <a class="text-light" href="#">Сайт под ключ</a>
+                  </li>
+                  <li class="burger__services_item">
+                      <a class="text-light" href="#">Дизайн</a>
+                  </li>
+                  <li class="burger__services_item">
+                      <a class="text-light" href="#">Верстка</a>
+                  </li>
+                  <li class="burger__services_item">
+                      <a class="text-light" href="#">Разработка</a>
+                  </li>
+                  <li class="burger__services_item">
+                      <a class="text-light" href="#">SEO-продвижение</a>
+                  </li>
+              </ul>
+          </div>
+          <div class="footer__contacts">
+              <p class="text-normal">Контакты</p>
+              <a class="text-light" href="https://yandex.ru/maps/?pt=27.573572,53.863688&z=18&l=map" target="_blank">г. Минск, ул.&nbsp;Маяковского, 111, офис&nbsp;513</a>
+              <a class="text-light" href="tel:+375299103032">+375 29 910 3032</a>
+              <a class="text-light" href="mailto:yar@bydesign.by">yar@bydesign.by</a>
+          </div>
+      </div>
+      <div class="burger-menu__col burger-menu__col1">
+          <a href="#" class="title-black">дизайн</a>
+          <ul class="burger-menu__list">
+              <li class="burger-menu__item item-submenu"><a href="#">Сайтов</a>
+                  <ul class="burger-menu__sublist">
+                      <li class="burger-menu__subitem"><a href="#">Сайт-визитка</a></li>
+                      <li class="burger-menu__subitem"><a href="#">Сайт-каталог</a></li>
+                      <li class="burger-menu__subitem"><a href="#">Интернет-магазин</a></li>
+                      <li class="burger-menu__subitem"><a href="#">Лендинг</a></li>
+                  </ul>
+              </li>
+              <li class="burger-menu__item"><a href="#">Фирменного стиля</a></li>
+              <li class="burger-menu__item"><a href="#">Мобильных приложений</a></li>
+              <li class="burger-menu__item"><a href="#">Веб-сервисов</a></li>
+              <li class="burger-menu__item"><a href="#">Личных кабинетов</a></li>
+          </ul>
+      </div>
+      <div class="burger-menu__col burger-menu__col2">
+          <a href="#" class="title-black">Разработка</a>
+          <ul class="burger-menu__list">
+              <li class="burger-menu__item item-submenu"><a href="#">Сайтов</a>
+                  <ul class="burger-menu__sublist">
+                      <li class="burger-menu__subitem"><a href="#">Сайт-визитка</a></li>
+                      <li class="burger-menu__subitem"><a href="#">Сайт-каталог</a></li>
+                      <li class="burger-menu__subitem"><a href="#">Интернет-магазин</a></li>
+                      <li class="burger-menu__subitem"><a href="#">Лендинг</a></li>
+                  </ul>
+              </li>
+              <li class="burger-menu__item"><a href="#">Веб-сервисов</a></li>
+              <li class="burger-menu__item"><a href="#">Разработка сайтов на Bitrix</a></li>
+              <li class="burger-menu__item"><a href="#">Разработка сайтов на ModX</a></li>
+          </ul>
+      </div>
+      <div class="burger-menu__col burger-menu__col3">
+          <a href="#" class="title-black">Seo-продвижение</a>
+          <a href="#" class="title-black">Портфолио</a>
+          <a href="#" class="title-black">Контакты</a>
+          <a class="burger-menu__contacts text-light" href="https://yandex.ru/maps/?pt=27.573572,53.863688&z=18&l=map" target="_blank">г. Минск, ул. Маяковского, 111, офис 513</a>
+          <a class="burger-menu__contacts text-light" href="tel:+375299103032">+375 29 910 3032</a>
+          <a class="burger-menu__contacts text-light" href="mailto:yar@bydesign.by">yar@bydesign.by</a>
+      </div>
+  </div>  <div id="myModal" class="modal">
+      <div class="modal-content">
+          <div class="modal-content__imgContainer">
+              <img src="./assets/images/cactusOrange.png" alt="#">
+          </div>
+          <form action="">
+              <div class="modal-content__inpContainer">
+                  <label for="#">Ваше имя</label>
+                  <input placeholder="Имя" name="name" type="text">
+                  <label for="#">Ваше почта</label>
+                  <input placeholder="Почта" name="mail" type="email">
+                  <label for="#">Ваш телефон</label>
+                  <input placeholder="Телефон" name="phone" type="tel">
+              </div>
+              <div class="modal-header">
+                  <span class="close">&times;</span>
+              </div>
+          </form>
+      </div>
+  </div>  <main>
+
+    
+    <section class="intro development wrapper">
+        <div class="intro__main">
+            <div class="intro__top">
+                <div class="intro__main_titles">
+                    <h2 data-text="Разработка сайтов" class="title-white">Разработка сайтов</h2>
+                </div>
+            </div>
+            <a class="intro__main_btn btn" href="#">
+                Заказать разработку
+            </a>
+            <div class="intro__bottom">
+                <h1 class="intro__main_name title-orange">СТудия яр</h1>
+                <p class="intro__main_text">Входим в топ-10 студий Минска</p>
+            </div>
+            <a class="intro__main_btn btn mobile" href="#">
+                Заказать разработку
+            </a>
+        </div>
+    </section>
+    
+    <section class="wrapper scheme">
+        <div class="scheme__top">
+            <h3 class="title-black">Процесс&nbsp;<br>#веб-разработки</h3>
+            <p class="text-light">
+                Мы создаем сайты, которые работают для вашего бизнеса и ваших пользователей. Будь то сложная корпоративная платформа и хранилище данных, адаптивное веб-приложение или маркетинговый сайт, наши веб-решения работают бесперебойно и обеспечивают согласованный интерфейс для пользователей на всех платформах.
+            </p>
+        </div>
+        <div class="scheme__body">
+            <div class="scheme__el scheme__el1">
+                <div class="scheme__el_wrap">
+                    <p class="scheme__num">1</p>
+                    <p class="scheme__text">Составление технического задания</p>    
+                </div>
+            </div>
+            <div class="scheme__el scheme__el2">
+                <div class="scheme__el_wrap">
+                    <p class="scheme__num">2</p>
+                    <p class="scheme__text">Разработка дизайна сайта</p>
+                </div>
+            </div>
+            <div class="scheme__el scheme__el3">
+                <div class="scheme__el_wrap">
+                    <p class="scheme__num">3</p>
+                    <p class="scheme__text">Осущес&shy;твле&shy;ние верстки</p>
+                </div>
+            </div>
+            <div class="scheme__el scheme__el4">
+                <div class="scheme__el_wrap">
+                    <p class="scheme__num">4</p>
+                    <p class="scheme__text">Наполнение сайта контентом</p>
+                </div>
+            </div>
+            <div class="scheme__el scheme__el5">
+                <div class="scheme__el_wrap">
+                    <p class="scheme__num">5</p>
+                    <p class="scheme__text">Тести&shy;рование сайта</p>
+                </div>
+            </div>
+            <div class="scheme__el scheme__el6">
+                <div class="scheme__el_wrap">
+                    <p class="scheme__num">6</p>
+                    <p class="scheme__text">Размещение сайта на хостинге</p>
+                </div>
+            </div>
+            <div class="scheme__body_bottom">
+                <p class="scheme__body_bottom-text1 subtitle">
+                    тЕХНОЛОГИИ ПОСТОЯННО РАЗВИВАЮТСЯ И СПУСТЯ ВРЕМЯ ТРЕБУЮТ ОБНОВЛЕНИЕ УСТАРЕВШЕГО 
+                </p>
+                <p class="scheme__body_bottom-text2 subtitle">
+                    Прошло 10 лет            
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="wrapper design dark services-section">
+        <h3 class="title-black">#Разработка сайтов</h3>
+        <div class="text-block">
+            <ul class="services">
+                <li class="services__item">
+                    <h4 class="subtitle">Разработка сайта-визитки</h4>
+                    <a class="btn-more" href="#"></a>
+                    <a class="btn" href="#">Подробнее</a>
+                    <p class="services__text text-light">
+                        Через сайт-визитку компания может легко и эффективно презентовать себя не только клиентам, но и партнерам, инвесторам. Такой ресурс имеет небольшой объем, что и становится главной причиной необходимости SEO-продвиженияю.                
+                    </p>
+                </li>
+                <li class="services__item">
+                    <h4 class="subtitle">разработка сайта-каталога</h4>
+                    <a class="btn-more" href="#"></a>
+                    <a class="btn" href="#">Подробнее</a>
+                    <p class="services__text text-light">
+                        Через сайт-визитку компания может легко и эффективно презентовать себя не только клиентам, но и партнерам, инвесторам. Такой ресурс имеет небольшой объем, что и становится главной причиной необходимости SEO-продвиженияю.                
+                    </p>
+                </li>
+                <li class="services__item">
+                    <h4 class="subtitle">разработка интернет-магазина</h4>
+                    <a class="btn-more" href="#"></a>
+                    <a class="btn" href="#">Подробнее</a>
+                    <p class="services__text text-light">
+                        Через сайт-визитку компания может легко и эффективно презентовать себя не только клиентам, но и партнерам, инвесторам. Такой ресурс имеет небольшой объем, что и становится главной причиной необходимости SEO-продвиженияю.                
+                    </p>
+                </li>
+                <li class="services__item">
+                    <h4 class="subtitle">Разработка лендинга</h4>
+                    <a class="btn-more" href="#"></a>
+                    <a class="btn" href="#">Подробнее</a>
+                    <p class="services__text text-light">
+                        Через сайт-визитку компания может легко и эффективно презентовать себя не только клиентам, но и партнерам, инвесторам. Такой ресурс имеет небольшой объем, что и становится главной причиной необходимости SEO-продвиженияю.                
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    
+    <section class="wrapper projects">
+        <h3 class="title-black projects__title">#Проекты</h3>
+        <a class="btn" href="#">Перейти в портфолио</a>
+        <div class="projects__wrap">
+            <a class="project" target="_blank" href="#">
+                <div class="project__bottom">
+                    <img class="project__bottom_img" src="assets/images/project-bank.jpg" alt="портфолио беларус банк 100 лет">
+                </div>
+                <div class="project__top">
+                    <div class="project__top_top-info">
+                        <p class="subtitle">Сайт к 100-летию беларусбанка</p>
+                        <p class="project__top_hashtags">
+                            <span class="text-light">#дизайн</span>
+                            <span class="text-light">#верстка</span>
+                        </p>    
+                    </div>
+                    <p class="project__top_bottom-text text-light">
+                        Основная цель - разработать не просто дизайн, а создать концепцию, не похожую на существующие сайты
+                    </p>
+                </div>
+            </a>
+            <a class="project" target="_blank" href="#">
+                <div class="project__bottom shadowGray">
+                    <img class="project__bottom_img" src="assets/images/project-cleaning.jpg" alt="портфолио клининг">
+                </div>
+                <div class="project__top">
+                    <div class="project__top_top-info">
+                        <p class="subtitle">Сайт Клининговой компании Proffclean</p>
+                        <p class="project__top_hashtags">
+                            <span class="text-light">#дизайн</span>
+                            <span class="text-light">#верстка</span>
+                        </p>    
+                    </div>
+                    <p class="project__top_bottom-text text-light">
+                        Основная цель - разработать не просто дизайн, а создать концепцию, не похожую на существующие сайты
+                    </p>
+                </div>
+            </a>
+            <a class="project" target="_blank" href="#">
+                <div class="project__bottom shadowGray">
+                    <img class="project__bottom_img" src="assets/images/project-olmi.jpg" alt="портфолио OlmiConnect">
+                </div>
+                <div class="project__top">
+                    <div class="project__top_top-info">
+                        <p class="subtitle">Интернет-магазин сетевого оборудования OlmiConnect</p>
+                        <p class="project__top_hashtags">
+                            <span class="text-light">#дизайн</span>
+                        </p>    
+                    </div>
+                    <p class="project__top_bottom-text text-light">
+                        Основная цель - разработать не просто дизайн, а создать концепцию, не похожую на существующие сайты
+                    </p>
+                </div>
+            </a>
+            <a class="project" target="_blank" href="#">
+                <div class="project__bottom">
+                    <img class="project__bottom_img" src="assets/images/project-oxygen.jpg" alt="портфолио Oxygen">
+                </div>
+                <div class="project__top">
+                    <div class="project__top_top-info">
+                        <p class="subtitle">Сайт-визитка линейки продукции Oxygen от Faberlic</p>
+                        <p class="project__top_hashtags">
+                            <span class="text-light">#сайт_под_ключ</span>
+                        </p>    
+                    </div>
+                    <p class="project__top_bottom-text text-light">
+                        Основная цель - разработать не просто дизайн, а создать концепцию, не похожую на существующие сайты
+                    </p>
+                </div>
+            </a>
+        </div>
+    </section>
+    
+    <section class="wrapper development questions">
+        <h3 class="title-black">Разработка сайтов&nbsp;<br>#вопрос-ответ</h3>
+        <ul class="questions__list">
+            <li class="questions__item">
+                <a href="#" class="questions__item_btn"></a>
+                <p class="subtitle">какой срок создания сайта?</p>
+                <p class="text-light">
+                    Если мы занимаемся разработкой сайта “с нуля”, то создаем исключительно уникальные дизайн-макеты для будущих сайтов. В нашей компании есть целый отдел отвечающий за “прекрасное”. Возглавляет его креативный арт-директор, который создает общую концепцию будущего проекта, а дальше в дело вступают UX\UI дизайнеры, которые на основе согласованной с Заказчиком концепции, создают все необходимые страницы.
+                </p>
+            </li>
+            <li class="questions__item">
+                <a href="#" class="questions__item_btn"></a>
+                <p class="subtitle">Применение готового дизайна делает создание сайта дешевле?</p>
+                <p class="text-light">
+                    Если мы занимаемся разработкой сайта “с нуля”, то создаем исключительно уникальные дизайн-макеты для будущих сайтов. В нашей компании есть целый отдел отвечающий за “прекрасное”. Возглавляет его креативный арт-директор, который создает общую концепцию будущего проекта, а дальше в дело вступают UX\UI дизайнеры, которые на основе согласованной с Заказчиком концепции, создают все необходимые страницы.
+                </p>
+            </li>
+            <li class="questions__item">
+                <a href="#" class="questions__item_btn"></a>
+                <p class="subtitle">Сможет ли сотрудник, не знакомый с программированием, обновлять информацию на сайте?</p>
+                <p class="text-light">
+                    Да, мы разрабатываем сайты с функциональными системами управления, которые позволяют легко обновлять и редактировать информацию на Вашем сайте. Перед заказом разработки сайта Вы можете посмотреть и сравнить демоверсии систем управления сайтом.
+                </p>
+            </li>
+            <li class="questions__item">
+                <a href="#" class="questions__item_btn"></a>
+                <p class="subtitle">Какие изменения я могу внести в веб-сайт без дополнительной платы?</p>
+                <p class="text-light">
+                    Если мы занимаемся разработкой сайта “с нуля”, то создаем исключительно уникальные дизайн-макеты для будущих сайтов. В нашей компании есть целый отдел отвечающий за “прекрасное”. Возглавляет его креативный арт-директор, который создает общую концепцию будущего проекта, а дальше в дело вступают UX\UI дизайнеры, которые на основе согласованной с Заказчиком концепции, создают все необходимые страницы.
+                </p>
+            </li>
+            <li class="questions__item">
+                <a href="#" class="questions__item_btn"></a>
+                <p class="subtitle">Какие еще услуги включены в стоимость разработки сайта?</p>
+                <p class="text-light">
+                    Если мы занимаемся разработкой сайта “с нуля”, то создаем исключительно уникальные дизайн-макеты для будущих сайтов. В нашей компании есть целый отдел отвечающий за “прекрасное”. Возглавляет его креативный арт-директор, который создает общую концепцию будущего проекта, а дальше в дело вступают UX\UI дизайнеры, которые на основе согласованной с Заказчиком концепции, создают все необходимые страницы.
+                </p>
+            </li>
+        </ul>
+    </section>
+    
+    <section class="wrapper request">
+        <div class="request__title">
+            <h3 class="title-black">Оставьте #заявку</h3>
+        </div>
+        <div class="request__wrap">
+            <p class="text-normal">
+                Оставьте свой номер телефона, и мы сами перезвоним вам. Обсуждение проекта еще не означает начало работы: мы расскажем о себе и о вариантах вополщения ваших идей. Вы принимаете решение о сотрудничестве.
+            </p>
+            <form class="request__form">
+                <input type="tel" name="request__tel" id="request__tel" placeholder="Телефон">
+                <button class="btn">Оставить заявку</button>
+            </form>
+        </div>
+    </section>
+    
+    <section class="wrapper trust">
+        <h3 class="title-black trust__title">Нам #Доверяют</h3>
+        <div class="trust__wrapper swiper-container">
+            <div class="trust__btns">
+                <a class="trust__btn_left" href="#">
+                    <svg viewBox="0 0 51 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M50.3536 4.85355C50.5488 4.65829 50.5488 4.34171 50.3536 4.14645L47.1716 0.964466C46.9763 0.769204 46.6597 0.769204 46.4645 0.964466C46.2692 1.15973 46.2692 1.47631 46.4645 1.67157L49.2929 4.5L46.4645 7.32843C46.2692 7.52369 46.2692 7.84027 46.4645 8.03553C46.6597 8.2308 46.9763 8.2308 47.1716 8.03553L50.3536 4.85355ZM0 5H50V4H0V5Z" fill="white"/>
+                    </svg>             
+                </a>
+                <span class="trust__page"></span>
+                <a class="trust__btn_right" href="#">
+                    <svg viewBox="0 0 51 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M50.3536 4.85355C50.5488 4.65829 50.5488 4.34171 50.3536 4.14645L47.1716 0.964466C46.9763 0.769204 46.6597 0.769204 46.4645 0.964466C46.2692 1.15973 46.2692 1.47631 46.4645 1.67157L49.2929 4.5L46.4645 7.32843C46.2692 7.52369 46.2692 7.84027 46.4645 8.03553C46.6597 8.2308 46.9763 8.2308 47.1716 8.03553L50.3536 4.85355ZM0 5H50V4H0V5Z" fill="white"/>
+                    </svg> 
+                </a>
+            </div>  
+            <div class="trust__companies swiper-wrapper">
+                <a href="#" class="trust__company swiper-slide">
+                    <img src="assets/images/logo-belb.svg" alt="беларусбанк лого">
+                </a>
+                <a href="#" class="trust__company swiper-slide">
+                    <img src="assets/images/logo-redb.svg" alt="редбулл лого">
+                </a>
+                <a href="#" class="trust__company swiper-slide">
+                    <img src="assets/images/logo-faberlic.svg" alt="фаберлик лого">
+                </a>
+                <a href="#" class="trust__company swiper-slide">
+                    <img src="assets/images/logo-softline.svg" alt="софтлайн лого">
+                </a>
+                <a href="#" class="trust__company swiper-slide">
+                    <img src="assets/images/logo-retail.svg" alt="ретейл лого">
+                </a>
+                <a href="#" class="trust__company swiper-slide">
+                    <img src="assets/images/logo-redb.svg" alt="редбулл лого">
+                </a>
+                <a href="#" class="trust__company swiper-slide">
+                    <img src="assets/images/logo-faberlic.svg" alt="фаберлик лого">
+                </a>
+                <a href="#" class="trust__company swiper-slide">
+                    <img src="assets/images/logo-softline.svg" alt="софтлайн лого">
+                </a>
+                <a href="#" class="trust__company swiper-slide">
+                    <img src="assets/images/logo-retail.svg" alt="ретейл лого">
+                </a>  
+                <a href="#" class="trust__company swiper-slide">
+                    <img src="assets/images/logo-faberlic.svg" alt="фаберлик лого">
+                </a>
+                <a href="#" class="trust__company swiper-slide">
+                    <img src="assets/images/logo-softline.svg" alt="софтлайн лого">
+                </a>
+                <a href="#" class="trust__company swiper-slide">
+                    <img src="assets/images/logo-retail.svg" alt="ретейл лого">
+                </a>
+                <a href="#" class="trust__company swiper-slide">
+                    <img src="assets/images/logo-redb.svg" alt="редбулл лого">
+                </a>
+                <a href="#" class="trust__company swiper-slide">
+                    <img src="assets/images/logo-faberlic.svg" alt="фаберлик лого">
+                </a>
+                <a href="#" class="trust__company swiper-slide">
+                    <img src="assets/images/logo-softline.svg" alt="софтлайн лого">
+                </a>
+                <a href="#" class="trust__company swiper-slide">
+                    <img src="assets/images/logo-retail.svg" alt="ретейл лого">
+                </a>      
+            </div>  
+        </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+      <div class="footer__col1">
+          <div class="footer__logo">
+              <svg class="footer__logo_img" viewBox="0 0 121 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M24.5348 0.0539939H43.3683V15.8998H27.7698C22.3888 15.8998 21.7482 20.6376 22.1006 23.0065C21.7418 30.0491 29.745 30.6359 33.7914 30.0491V45.4147L21.3959 69.9998H0L15.2141 43.0138C7.38996 40.1732 4.88329 34.1183 4.10665 32.2424L4.09981 32.2259C3.3311 30.3692 2.46629 23.9028 2.62644 21.758C2.78659 19.6132 2.24209 11.3222 7.94339 5.27192C12.5044 0.431733 20.9048 -0.223442 24.5348 0.0539939Z" fill="#FFB500"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M43.4321 0.0538447H79.818C86.3414 -0.38365 99.4971 2.56997 99.9327 17.8844C100.477 37.0275 97.7226 40.1326 91.1565 43.3658C89.3522 44.1021 83.7256 45.5426 75.6541 45.4146C67.5826 45.2865 50.8097 45.3612 43.4321 45.4146V0.0538447ZM43.4321 53.3215H60.0876V69.9996H43.4321V53.3215ZM59.9596 15.8599V29.9451H72.9957C78.1525 29.9451 81.1004 29.6872 81.2594 23.5427C81.4467 16.3027 76.368 16.0294 73.4419 15.872C73.3664 15.8679 73.2924 15.8639 73.2199 15.8599H59.9596Z" fill="white"/>
+                  <path d="M70.4615 57.58H66.6622V67.397H64.726V57.58H61V56H70.4615V57.58Z" fill="white"/>
+                  <path d="M76.176 64.5425L78.8135 56H80.8858L76.333 69.156C75.6283 71.052 74.5084 72 72.9734 72L72.607 71.9684L71.8849 71.8315V70.2515L72.4082 70.2936C73.0641 70.2936 73.5734 70.1602 73.9363 69.8934C74.3061 69.6265 74.6096 69.1385 74.8468 68.4292L75.2759 67.2706L71.236 56H73.3501L76.176 64.5425Z" fill="white"/>
+                  <path d="M81.9429 65.8065L82.6127 64.9743C83.3663 63.9912 83.7954 62.5166 83.9001 60.5504L84.078 56H91.373V65.8065H92.8278V70.7465H90.8915V67.397H82.9895V70.7465H81.0533L81.0637 65.8065H81.9429ZM84.235 65.8065H89.4367V57.8012H85.9515L85.8363 60.5188C85.7177 62.7869 85.184 64.5495 84.235 65.8065Z" fill="white"/>
+                  <path d="M102.3 56H104.236V67.397H102.3V59.0862L97.0771 67.397H95.1408V56H97.0771V64.3213L102.3 56Z" fill="white"/>
+                  <path d="M116 56V67.397H114.053V62.9625H111.133L108.464 67.397H106.371L109.218 62.6675C108.492 62.4007 107.934 61.9899 107.543 61.4352C107.16 60.8734 106.968 60.2203 106.968 59.476C106.968 58.4367 107.355 57.6011 108.129 56.9691C108.904 56.33 109.94 56.007 111.238 56H116ZM108.914 59.497C108.914 60.0518 109.103 60.5012 109.48 60.8453C109.856 61.1824 110.355 61.3544 110.976 61.3614H114.053V57.58H111.269C110.551 57.58 109.978 57.7591 109.553 58.1172C109.127 58.4683 108.914 58.9282 108.914 59.497Z" fill="white"/>
+                  <path d="M53.2851 65.5196C54.0088 65.5196 54.6411 65.3235 55.182 64.9314C55.723 64.5392 56.0227 64.049 56.0811 63.4608H58C57.9635 64.0686 57.7295 64.6471 57.2982 65.1961C56.867 65.7451 56.2895 66.183 55.5658 66.5098C54.8494 66.8366 54.0892 67 53.2851 67C51.6696 67 50.383 66.5196 49.4254 65.5588C48.4751 64.5915 48 63.2712 48 61.598V61.2941C48 60.2614 48.212 59.3431 48.636 58.5392C49.0599 57.7353 49.6667 57.1111 50.4561 56.6667C51.2529 56.2222 52.1923 56 53.2741 56C54.6045 56 55.7083 56.3562 56.5855 57.0686C57.47 57.781 57.9415 58.7059 58 59.8431H56.0811C56.0227 59.1569 55.7303 58.5948 55.2039 58.1569C54.6849 57.7124 54.0417 57.4902 53.2741 57.4902C52.2434 57.4902 51.443 57.8235 50.8728 58.4902C50.3099 59.1503 50.0285 60.1078 50.0285 61.3627V61.7059C50.0285 62.9281 50.3099 63.8693 50.8728 64.5294C51.4357 65.1895 52.2398 65.5196 53.2851 65.5196Z" fill="#27272E"/>
+              </svg>    
+          </div>
+          <div class="footer__form">
+              <p class="footer__form_text text-normal">Остались вопросы? Мы с вами свяжемся</p>
+              <form>
+                  <input type="tel" name="footer-tel" id="footer-tel" placeholder="Телефон">
+                  <button class="footer__form_btn">
+                      <img src="assets/images/arr-white.svg" alt="">
+                  </button>
+              </form>
+          </div>
+      </div>
+      <div class="footer__col2">
+          <div class="footer__col2_services">
+              <p class="text-normal">
+                  Услуги
+              </p>
+              <ul class="footer__services_list">
+                  <li class="footer__services_item">
+                      <a class="text-light" href="#">Сайт под ключ</a>
+                  </li>
+                  <li class="footer__services_item">
+                      <a class="text-light" href="#">Дизайн</a>
+                  </li>
+                  <li class="footer__services_item">
+                      <a class="text-light" href="#">Верстка</a>
+                  </li>
+                  <li class="footer__services_item">
+                      <a class="text-light" href="#">Разработка</a>
+                  </li>
+                  <li class="footer__services_item">
+                      <a class="text-light" href="#">SEO-продвижение</a>
+                  </li>
+              </ul>
+          </div>
+          <div class="footer__contacts">
+              <p class="text-normal">Контакты</p>
+              <a class="text-light" href="https://yandex.ru/maps/?pt=27.573572,53.863688&z=18&l=map" target="_blank">г. Минск, ул.&nbsp;Маяковского, 111, офис&nbsp;513</a>
+              <a class="text-light" href="tel:+375299103032">+375 29 910 3032</a>
+              <a class="text-light" href="mailto:yar@bydesign.by">yar@bydesign.by</a>
+          </div>
+      </div>
+  </footer>
+  <!-- JS -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <script defer src="assets/vendor/scroll-lock/scroll-lock.min.js"></script>
+  <script defer src="assets/vendor/swiper/swiper.min.js"></script>
+  <script defer src="assets/js/app.js"></script>
+
+  <!-- <div class="preloader">
+    <div class="loader">
+      <aside class="loader__box loader--left">
+        <span class="loader__circle">
+          <img src="../assets/images/cactusGreen.png" alt="">
+        </span>
+      </aside>
+      <aside class="loader__box loader--right">
+        <span class="loader__circle">
+          <img src="../assets/images/cactusOrange.png" alt="">
+        </span>
+      </aside>
+    </div>
+  </div> -->
+</body>
+
+</html>

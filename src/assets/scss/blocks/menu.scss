@@ -1,0 +1,334 @@
+.burger-menu {
+    position: fixed;
+    width: 100%;
+    height: var(--h);
+    background: $dark;
+    z-index: 1000;
+    padding: 4rem 10rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: space-between;
+    transition: 1.5s;
+    transform: translateX(101%);
+    overflow-y: auto;
+    @include breakpoint($mid-bp) {
+        justify-content: flex-start;
+    }
+    @include breakpoint($sm-bp) {
+        padding-left: 3.073rem;
+        padding-right: 3.073rem;
+    }
+
+    .btn {
+        @include breakpoint($sm-bp) {
+            display: flex;
+            margin-top: 8rem;
+        }
+    }
+
+    .title-black {
+        color: white;
+        text-decoration: none;
+        display: block;
+        transition: color .4s;
+        &:hover,
+        &:focus,
+        &:active {
+            color: $orange;
+        }
+    }
+}
+
+.open-menu {
+    transform: translateX(0);
+}
+
+.burger-menu__col {
+    flex-grow: 1;
+    max-width: max-content;
+    margin-top: 9.5rem;
+    @include breakpoint($mid-bp) {
+        min-width: 50%;
+
+        &:nth-last-child(1) {
+            margin-top: 3rem;
+        }
+    }
+    @include breakpoint($sm-bp) {
+        width: 30%;
+        margin-top: 4.4rem;
+        min-width: unset;
+        .title-black {
+            font-size: 3.3rem;
+        }
+    }
+}
+
+
+.burger-menu__col1 {
+    @include breakpoint($sm-bp) {
+        order: 4;
+    }
+}
+.burger-menu__col2 {
+    @include breakpoint($sm-bp) {
+        order: 3;
+        max-width: 53%;
+
+        .burger-menu__list {
+            max-width: 82%;
+        }
+    }
+}
+
+.item-submenu {
+    @include breakpoint($sm-bp) {
+        .burger-menu__sublist {
+            max-height: 0;
+            transition: .4s;
+            padding-top: 0;
+            overflow: hidden;
+        }
+    }
+}
+
+.item-submenu > a {
+    @include breakpoint($sm-bp) {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        &::after {
+            content: "";
+            display: inline-block;
+            width: 2.3rem;
+            height: 1.2rem;
+            background: url("../images/drop-arr.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+            margin-left: 1.7rem;
+            transition: transform .4s;
+        }            
+    }
+}
+
+.item-submenu.opened > a {
+    @include breakpoint($sm-bp) {
+        &::after {
+            transform: scale(1, -1);
+        }            
+    }
+}
+
+.item-submenu.opened  {
+    @include breakpoint($sm-bp) {
+        .burger-menu__sublist {
+            max-height: 100vh;
+            padding-top: 2.3rem;
+        }                   
+    }
+}
+
+.burger-menu__list {
+    margin: 1.3rem 0 0;
+    padding: 0;
+    @include breakpoint($sm-bp) {
+        margin: 2.5rem 0 0;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+        transition: color .4s;
+        &:hover,
+        &:focus,
+        &:active {
+            color: $orange;
+        }
+    }
+}
+
+.burger-menu__sublist {
+    margin: 1rem 0 0 2rem;
+    padding: 0;
+    position: relative;
+    @include breakpoint($sm-bp) {
+        padding: 2.3rem 0 0 2rem;
+        margin: 0;
+    }
+
+    &::before {
+        content: "";
+        width: 1px;
+        height: 100%;
+        display: block;
+        position: absolute;
+        background: white;
+        top: 0;
+        left: -2rem;
+        @include breakpoint($sm-bp) {
+            height: calc(100% - 2rem);
+            top: 2rem;
+            left: 0;
+        }
+    }
+
+    .burger-menu__subitem {
+        margin-bottom: 0.7rem;
+        @include breakpoint($sm-bp) {
+            margin-bottom: 2.7rem;   
+            &:nth-last-child(1) {
+                margin-bottom: 1rem;
+            }     
+        }
+    }
+}
+
+.burger-menu__item {
+    list-style: none;
+    font-family: "Gilroy";
+    font-size: 2.4rem;
+    font-weight: 300;
+    line-height: 3.6rem;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 1rem;
+    @include breakpoint($sm-bp) {
+        font-size: 2.9rem;
+        line-height: 1.5;
+        margin-bottom: 2rem;
+    }
+}
+
+.burger-menu__subitem {
+    list-style: none;
+    font-family: "Gilroy";
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 2.7rem;
+    letter-spacing: 0em;
+    text-align: left;
+    @include breakpoint($sm-bp) {
+        font-size: 2.9rem;
+    }
+}
+
+.burger-menu__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.burger-menu__close {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-left: 10rem;
+    height: 1.1rem;
+    width: 3rem;
+    position: relative;
+    padding: 2rem;
+    cursor: pointer;
+    @include breakpoint($sm-bp) {
+        margin-right: -1rem;
+    }
+}
+
+.burger-menu__close_line {
+    display: block;
+    width: 4rem;
+    height: 1px;
+    background: white;
+    transition: .4s;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    transform-origin: center;
+    @include breakpoint($sm-bp) {
+        width: 7rem;
+    }
+
+    &:nth-child(2) {
+        top: 50%;
+        transform: translateY(-50%) rotate(-45deg);
+    }    
+
+}
+
+.burger-menu__logo {
+    width: 12rem;
+    @include breakpoint($sm-bp) {
+        width: 14rem;
+    }
+}
+
+.burger-menu__col3 {
+    .title-black {
+        margin-bottom: 1rem;
+    }
+    @include breakpoint($sm-bp) {
+        display: none;
+    }
+}
+
+.burger-menu__contacts {
+    text-decoration: none;
+    display: block;
+    color: white;
+    margin-bottom: 1rem;
+    transition: color .4s;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: $orange;
+    }
+}
+
+.burger__mob {
+    display: none;
+    @include breakpoint($sm-bp) {
+        display: flex;
+        margin-top: 8rem;
+
+        .burger__services {
+            width: 53%;
+        }
+        
+        .burger__services_list {
+            margin: 0;
+            padding: 0;
+        }
+
+        .burger__services_item {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .text-light {
+            text-decoration: none;
+            color: white;
+            transition: color .4s;
+    
+            &:hover,
+            &:focus,
+            &:active {
+                color: $orange;
+            }
+        }
+    
+    }
+
+    .text-normal {
+        color: white;
+        font-weight: 800;
+        text-transform: uppercase;
+        font-size: 3.2rem;
+        margin-bottom: 4rem;
+    }
+}
+

@@ -1,0 +1,515 @@
+.turn-key {
+    .intro__top {
+        margin-top: 7.5rem;
+        @include breakpoint($sm-bp) {
+            margin-top: 17.4rem;
+        }
+    }
+
+    .intro__main_btn {
+        margin-top: 8rem;
+    }
+
+    .intro__bottom {
+        align-self: flex-end;
+        margin-top: -17.4rem;
+        @include breakpoint($sm-bp) {
+            margin-top: .6rem;
+            width: 100%;
+        }
+    }
+
+    .intro__main_name {
+        margin-left: 0;
+    }
+    
+    .intro__main_text {
+        margin-left: 0;
+        @include breakpoint($sm-bp) {
+            margin-top: 5.1rem;            
+        }
+    }
+}
+
+.turn-key-services {
+    padding-top: 19.2rem;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20rem;
+    @include breakpoint($mid-bp) {
+        flex-direction: column;
+    }
+    @include breakpoint($sm-bp) {
+        padding-top: 17.1rem;
+        padding-bottom: 15.4rem;
+    }
+}
+
+.turn-key-services__col1 {
+    width: 42.7%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    @include breakpoint($mid-bp) {
+        width: 100%;
+    }
+
+    .text-light {
+        margin-top: 2rem;
+        @include breakpoint($sm-bp) {
+            margin-top: 3.5rem;
+        }
+    }
+
+    .btn {
+        color: $dark;
+        @include breakpoint($mid-bp) {
+            margin-top: 2rem;
+        }
+        @include breakpoint($sm-bp) {
+            margin-top: 4rem;
+        }
+    }
+}
+
+.turn-key-services__col2 {
+    width: 57.3%;
+    @include breakpoint($mid-bp) {
+        width: 100%;
+    }
+    @include breakpoint($sm-bp) {
+        margin-top: 2rem;        
+    }
+}
+
+.turn-key-services__list {
+    margin: 7rem 0 0;
+    padding: 0;
+}
+
+.turn-key-services__item {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    margin-bottom: 6.5rem;
+    border-bottom: 1px solid rgb(208, 208, 214);
+    padding-bottom: 1.6rem;
+    @include breakpoint($sm-bp) {
+        justify-content: space-between;
+        padding-bottom: 3.8rem;
+        margin-bottom: 4.7rem;
+    }
+
+    &:nth-last-child(1) {
+        margin-bottom: 0;
+    }
+
+    .subtitle {
+        color: $orange;
+        margin-right: 2.5rem;
+    }
+
+    .text-normal {
+        width: 100%;
+        margin: 2.2rem 0 0;
+        line-height: 1.5;
+        @include breakpoint($sm-bp) {
+            margin-top: 3rem;
+            max-width: 95%;
+        }
+    }
+}
+
+.footnote {
+    font-family: "Gilroy";
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 2.7rem;
+    letter-spacing: 0;
+    color: rgba(208, 208, 214, 1);
+    margin: 2.8rem 0 0;
+    @include breakpoint($sm-bp) {
+        font-size: 2.87rem;
+        line-height: 1.5;
+        margin: 3.8rem 0 0;        
+    }
+}
+
+.text-grey {
+    font-family: "Gilroy";
+    font-size: 2.4rem;
+    font-weight: 300;
+    line-height: 2.8rem;
+    letter-spacing: 0;
+    margin: 0;
+    color: rgba(208, 208, 214, 1);
+    @include breakpoint($sm-bp) {
+        font-size: 3.7rem;
+    }
+}
+
+.projects.dark {
+    background: $dark;
+    @include breakpoint($sm-bp) {
+        padding-top: 17.5rem;
+    }
+
+    .projects__title {
+        color: white;
+    }
+
+    .btn {
+        color: white;
+    }
+
+    .project__top {
+        background: $dark;
+    }
+
+    .project {
+        border: 2px dashed rgba(128, 128, 146, 1);
+
+        &:hover,
+        &:focus,
+        &:active {
+            border: 2px dashed transparent;
+
+            .project__top {
+                background: white;
+            }
+
+            .subtitle {
+                color: $dark;
+            }
+        }
+    }
+
+    .subtitle {
+        color: white;
+    }
+}
+
+.stack-balls__item {
+    display: none;
+}
+
+.stack-balls__text {
+    position: absolute;
+    max-width: 30%;
+    top: 20rem;
+    left: 10rem;
+    background: #ffffff7a;
+    box-shadow: 0 0 21px 23px #ffffff7a;
+    @include breakpoint($mid-bp) {
+        max-width: 40%;
+    }
+    @include breakpoint($sm-bp) {
+        top: unset;
+        left: unset;
+        max-width: 90%;
+        position: static;
+        box-shadow: unset;
+        margin-top: 16.6rem;
+        margin-left: 3rem;
+    }
+
+    .text-normal {
+        margin: 3.7rem 0 0;
+        line-height: 1.5;
+    }
+}
+
+.stack-balls {
+    position: relative;
+}
+
+.other-services {
+    padding-top: 19.7rem;
+    background: $dark;
+    padding-bottom: 19.9rem;
+    @include breakpoint($sm-bp) {
+        padding-top: 16.7rem;
+        padding-bottom: 7.9rem;
+    }
+
+    .title-black {
+        color: white;
+    }
+}
+
+.other-services__helperBlock {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .bitrix-desctopBtn {
+        @include breakpoint($sm-bp) {
+            display: none;
+        }
+    }
+}
+
+.bitrix-mobileBtn {
+    display: none !important;
+
+    @include breakpoint($sm-bp) {
+        display: block !important;
+    }
+}
+
+.other-services__wrap {
+    margin-top: 5.5rem;
+    display: flex;
+    justify-content: space-between;
+    @include breakpoint($sm-bp) {
+        flex-direction: column;
+        margin-top: 7.5rem;
+    }
+}
+
+.other-services__block {
+    border: 2px dashed white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 23%;
+    height: 52rem;
+    padding: 3.8rem 2.6rem;
+    box-sizing: border-box;
+    transition: background .4s;
+    cursor: pointer;
+    @include breakpoint($mid-bp) {
+        padding: 2.8rem 1.6rem;
+        height: 49rem;
+        width: 24%;
+    }
+    @include breakpoint($sm-bp) {
+        padding: 3.8rem 3.6rem;
+        height: 65rem;
+        width: 100%;  
+        margin-bottom: 8rem;      
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        background: white;
+
+        .subtitle {
+            color: $dark;
+        }
+
+        .text-light {
+            color: rgba(128, 128, 146, 1);
+        }
+
+        .text-normal {
+            color: $dark;
+        }
+
+        .other-services__hidden-btn {
+            pointer-events: all;
+            opacity: 1;
+        }
+
+        .other-services__bottom-btn.btn {
+            padding: 1.2rem 2.5rem;
+            border: 1px solid $orange;
+
+            svg {
+                margin-left: 2rem;
+            }
+        }
+    }
+
+    .other-services__bottom-btn {
+        max-width: max-content;
+        transition: .4s;
+        @include breakpoint($sm-bp) {
+            margin-bottom: 2rem;
+        }
+        svg {
+            transition: .4s;
+            @include breakpoint($sm-bp) {
+                margin-left: 23rem;
+                width: 10rem;
+            }
+        }
+    }
+
+    .subtitle {
+        color: white;
+        transition: color .4s;
+    }
+
+    .text-light {
+        margin: 1.2rem 0 0;    
+        transition: color .4s;
+    }
+
+    .btn {
+        border: 1px solid transparent;
+        padding: .5rem 0;
+        color: $orange;
+
+        &::after {
+            content: none;
+        }
+
+        svg {
+            width: 5rem;
+            margin-left: 8rem;
+            @include breakpoint($mid-bp) {
+                margin-left: 4rem;
+            }
+            path {
+                fill: $orange;
+                transition: .4s;
+            }
+        }
+    }
+}
+
+.other-services_darkHover {
+    &:hover,
+    &:focus,
+    &:active {
+        background: #27272E;
+
+        .subtitle {
+            color: #FFFFFF !important;
+        }
+
+        .text-light {
+            color: rgba(128, 128, 146, 1);
+        }
+
+        .text-normal {
+            color: #FFFFFF !important;
+        }
+
+        .other-services__hidden-btn {
+            pointer-events: all;
+            opacity: 1;
+        }
+
+        .other-services__bottom-btn.btn {
+            padding: 1.2rem 2.5rem;
+            border: 1px solid $orange;
+
+            svg {
+                margin-left: 2rem;
+            }
+        }
+    }
+}
+
+.other-services__period {
+    display: flex;
+    align-items: baseline;
+    margin: 0 0 2.6rem;
+    @include breakpoint($sm-bp) {
+        margin-bottom: 3.6rem;
+    }
+
+    .text-light {
+        color: white;
+        margin: 0;
+        font-size: 1.6rem;
+        font-weight: 300;
+        color: rgba(128, 128, 146, 1);
+        @include breakpoint($sm-bp) {
+            font-size: 2.9rem;
+        }    
+    }
+
+    .text-normal {
+        color: white;
+        margin: 0 0 0 .4rem;
+        font-size: 1.7rem;
+        transition: color .4s;
+        @include breakpoint($sm-bp) {
+            font-size: 2.8rem;
+            margin-left: 1.4rem;
+        }    
+    }
+}
+
+.other-services__hidden-btn {
+    margin-top: 1.5rem;
+    transition: opacity .4s;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.request {
+    padding-top: 19.7rem;
+    padding-bottom: 19.7rem;
+    display: flex;
+    justify-content: space-between;
+    @include breakpoint($mid-bp) {
+        flex-direction: column;
+    }
+    @include breakpoint($sm-bp) {
+        padding-top: 16.7rem;
+        padding-bottom: 16.5rem;
+    }
+}
+
+.request__title {
+    min-width: max-content;
+}
+
+.request__wrap {
+    max-width: 57.3%;
+    box-sizing: border-box;
+    padding-right: 2.9rem;
+    @include breakpoint($mid-bp) {
+        max-width: 80%;
+    }
+    @include breakpoint($sm-bp) {
+        max-width: 100%;
+        padding-right: 0;
+    }
+
+    .text-normal {
+        margin: 4rem 0 0;
+        line-height: 1.5;
+        @include breakpoint($sm-bp) {
+            margin: 3.9rem 0 0;
+            line-height: 1.5;
+            font-size: 2.87rem;
+        }
+    }
+}
+
+.request__form {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 4rem;
+    @include breakpoint($sm-bp) {
+        flex-direction: column;
+        margin-top: 2.5rem;
+    }
+
+    input {
+        width: -webkit-fill-available;
+        color: $dark;
+    }
+
+    .btn {
+        margin-left: 4rem;
+        min-width: max-content;
+        background: none;
+        color: $dark;
+        @include breakpoint($sm-bp) {
+            align-self: flex-start;
+            margin-left: 0;
+            margin-top: 4.9rem;
+        }
+    }
+}

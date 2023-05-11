@@ -1,0 +1,77 @@
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "vendor/reset";
+
+/* Blocks */
+
+@import "blocks/seo";
+@import "blocks/404";
+@import "blocks/contacts";
+@import "blocks/portfolio";
+@import "blocks/development";
+@import "blocks/layout";
+@import "blocks/design";
+@import "blocks/pop-up-vacancy";
+@import "blocks/turn-key";
+@import "blocks/header";
+@import "blocks/main";
+@import "blocks/footer";
+@import "blocks/menu";
+@import "blocks/pop-up-thanks";
+@import "blocks/designCard.scss";
+@import "blocks/developBitrix.scss";
+@import "blocks/preload.scss";
+@import "blocks/modal.scss";
+
+
+html {
+  font-size: calc(100vw / 1920 * 10);
+  font-family: "Gilroy";
+
+  @include breakpoint($mid-bp) {
+    font-size: calc(100vw / 1920 * 13);
+  }
+  
+  @include breakpoint($sm-bp) {
+    font-size: calc(100vw / 768 * 10);
+  }
+}
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  // overflow: scroll;
+  // overflow: hidden;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  // overflow: -moz-scrollbars-none; 
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar { 
+    width: 0 !important 
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.mobile {
+  display: none; 
+  @include breakpoint($sm-bp) {
+    display: block;
+  }
+}
+.desktop {
+  @include breakpoint($sm-bp) {
+    display: none;
+  }
+}
+
+.loaderHidden {
+  transform: translateX(-150%);
+
+  @include breakpoint($sm-bp) {
+    display: none;
+  }
+}

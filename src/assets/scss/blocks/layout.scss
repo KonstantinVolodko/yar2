@@ -1,0 +1,314 @@
+.layout {
+    .intro__top {
+        margin-top: 7.5rem;
+        @include breakpoint($sm-bp) {
+            margin-top: 17.4rem;
+        }
+    }
+
+    .intro__main_btn {
+        margin-top: 7rem;
+    }
+
+    .intro__bottom {
+        align-self: flex-end;
+        margin-top: -16.4rem;
+        margin-right: 0;
+        max-width: 51.5%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        @include breakpoint($sm-bp) {
+            margin-top: .6rem;
+            width: 100%;
+            max-width: 100%;
+            margin-right: 0;
+        }
+    }
+
+    .intro__main_name {
+        margin-left: 0;
+    }
+    
+    .intro__main_text {
+        margin-left: 0;
+        max-width: 62%;
+        @include breakpoint($mid-bp) {
+            max-width: 85%;
+        }
+        @include breakpoint($sm-bp) {
+            margin-top: 5.1rem;   
+            max-width: 100%;         
+        }
+    }
+}
+
+.space {
+    width: 100%;
+    height: 100vh;
+    background: rgb(226, 246, 253);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: teal;
+    font-size: 12rem;
+}
+
+.container-cubs {
+    width: 100%;
+    padding: 0 10rem;
+    margin: 0 auto;
+    box-sizing: border-box;
+    @include breakpoint($sm-bp) {
+        padding: 0 3.073rem;
+    }
+}
+
+.cubs {
+    position: relative;
+
+    width: 100%;
+    min-height: 96rem;
+
+    background-color: white;
+    @include breakpoint($sm-bp) {
+        min-height: 155.5rem;
+    }
+}
+
+.cubs-header {
+    padding-top: 15rem;
+    max-width: max-content;
+    z-index: 2;
+    position: relative;
+    @include breakpoint($sm-bp) {
+        padding-top: 11rem;
+    }
+}
+
+.cubs__heading {
+    font-weight: 800;
+    font-size: 6.4rem;
+    text-transform: uppercase;
+    font-family: "Gilroy";
+    margin-bottom: 4rem;
+    @include breakpoint($sm-bp) {
+        font-size: 6.15rem;
+        margin-bottom: 4.4rem;
+    }
+}
+
+.cubs__subheading {
+    width: 100%;
+    max-width: 58rem;
+    line-height: 1.5;
+    font-family: "Gilroy";
+    font-weight: 300;
+    font-size: 2.4rem;
+    box-shadow: 0 0px 18px 9px rgb(255 255 255 / 64%);
+    background: #ffffff87;
+    @include breakpoint($sm-bp) {
+        max-width: 100%;
+        font-size: 3.68rem;
+        margin-top: 0;
+    }
+}
+
+.cubs-item {
+    position: absolute;
+
+    transform-style: preserve-3d;
+    user-select: none;
+
+    width: 22rem;
+    height: 22rem;
+
+    margin: auto;
+
+    transition: top 0.6s linear, left 0.6s linear, transform 0.6s linear;
+    @include breakpoint($sm-bp) {
+        width: 13rem;
+        height: 13rem;    
+    }
+}
+
+
+.cubs:not(.scrolled) .cubs-item {
+    transform: rotateX(90deg) rotateY(0deg) rotateZ(0deg);
+}
+
+.cubs.scrolled.done .cubs-item {
+    transition: transform 0.2s linear;
+}
+
+.cubs:not(.scrolled) .cubs-item:nth-child(1) {
+    top: 15%;
+    left: 50%;
+}
+
+.cubs:not(.scrolled) .cubs-item:nth-child(2) {
+    top: 15%;
+    left: calc(50% + 23rem);
+}
+
+.cubs:not(.scrolled) .cubs-item:nth-child(3) {
+    top: 15%;
+    left: calc(50% + 46rem);
+}
+
+.cubs:not(.scrolled) .cubs-item:nth-child(4) {
+    top: calc(15% + 23rem);
+    left: 50%;
+}
+
+.cubs:not(.scrolled) .cubs-item:nth-child(5) {
+    top: calc(15% + 23rem);
+    left: calc(50% + 23rem);
+}
+
+.cubs:not(.scrolled) .cubs-item:nth-child(6) {
+    top: calc(15% + 23rem);
+    left: calc(50% + 46rem);
+}
+
+.cubs:not(.scrolled) .cubs-item:nth-child(7) {
+    top: calc(15% + 23rem);
+    left: calc(50% + 46rem);
+}
+
+.cubs-item .face {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    font-family: "Gilroy";
+    font-size: 3.8rem;
+    font-weight: 600;
+    @include breakpoint($sm-bp) {
+        font-size: 2rem;
+    }
+}
+
+.cubs-item .front {
+    background: #FF6500;
+    transform: translateZ(11rem);
+    @include breakpoint($sm-bp) {
+        transform: translateZ(6.5rem);
+    }
+}
+
+.cubs-item .back {
+    background: #d6510e;
+    transform: translateZ(-11rem) rotateY(180deg);
+    @include breakpoint($sm-bp) {
+        transform: translateZ(-6.5rem) rotateY(180deg);
+    }
+}
+
+.cubs-item .left {
+    background: #FFA366;
+    transform: translateX(-11rem) rotateY(-90deg);
+    @include breakpoint($sm-bp) {
+        transform: translateX(-6.5rem) rotateY(-90deg);
+    }
+}
+
+.cubs-item .right {
+    background: #fa7015;
+    transform: translateX(11rem) rotateY(90deg);
+    @include breakpoint($sm-bp) {
+        transform: translateX(6.5rem) rotateY(90deg);
+    }
+}
+
+.cubs-item .top {
+    background: #f3780d;
+    transform: translateY(-11rem) rotateX(90deg);
+    @include breakpoint($sm-bp) {
+        transform: translateY(-6.5rem) rotateX(90deg);
+    }
+}
+
+.cubs-item .bottom {
+    background: #fd8331;
+    transform: translateY(11rem) rotateX(-90deg);
+    @include breakpoint($sm-bp) {
+        transform: translateY(6.5rem) rotateX(-90deg);
+    }
+}
+
+.scrolled .cubs-item:nth-child(1) {
+    top: 6%;
+    left: 45%;
+    @include breakpoint($sm-bp) {
+        top: 35%;
+        left: 7%;
+    }
+}
+
+.scrolled .cubs-item:nth-child(2) {
+    top: 35%;
+    left: 62%;
+    @include breakpoint($sm-bp) {
+        top: unset;
+        bottom: 12%;
+        left: 56%;
+    }
+}
+
+.scrolled .cubs-item:nth-child(3) {
+    top: 68%;
+    left: 50%;
+    @include breakpoint($sm-bp) {
+        top: 52%;
+        left: 9%;
+    }
+}
+
+.scrolled .cubs-item:nth-child(4) {
+    top: 65%;
+    left: 15%;
+    @include breakpoint($sm-bp) {
+        top: 54%;
+        left: 42%;
+    }
+}
+
+.scrolled .cubs-item:nth-child(5) {
+    top: 45%;
+    left: 35%;
+    @include breakpoint($sm-bp) {
+        top: 39%;
+        left: 65%;
+    }
+}
+
+.scrolled .cubs-item:nth-child(6) {
+    top: 10%;
+    left: 80%;
+    @include breakpoint($sm-bp) {
+        top: unset;
+        bottom: 28%;
+        left: 71%;
+    }
+}
+
+.scrolled .cubs-item:nth-child(7) {
+    top: 65%;
+    left: 78%;
+    @include breakpoint($sm-bp) {
+        top: unset;
+        bottom: 24%;
+        left: 17%;
+    }
+}

@@ -1,0 +1,149 @@
+.pop-up-vacancy {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: white;
+    width: 50%;
+    top: 50%;
+    transform: translate(105%, -50%);
+    display: none;
+    transition: transform 1s;
+    z-index: 100;
+    @include breakpoint($sm-bp) {
+        width: 100%;
+    }
+
+    .pop-up__close {
+        left: unset;
+        right: 6rem;
+        width: 3.5rem;
+        height: 3.5rem;
+        @include breakpoint($sm-bp) {
+            right: 3.5rem;
+            top: 3rem;
+            width: 5rem;
+            height: 5rem;
+        }
+    }
+}
+
+.pop-up-vacancy.show {
+    transform: translate(0, -50%);
+}
+
+.pop-up-vacancy__body > .pop-up-vacancy__paragr {
+    margin-top: 2rem;
+}
+
+.pop-up-vacancy__body {
+    padding: 6rem 6rem 0;
+    box-sizing: border-box;
+    @include breakpoint($sm-bp) {
+        padding: 3.5rem 3rem 0;
+    }
+
+
+    .pop-up-vacancy__light {
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        @include breakpoint($sm-bp) {
+            margin-top: 1.5rem;
+        }
+    }
+
+    ul {
+        margin: 0;
+        padding: 0 0 0 2.5rem;
+        margin-bottom: 2rem;
+        @include breakpoint($sm-bp) {
+            padding: 0 0 0 4rem;
+        }
+
+        li {
+            font-family: "Gilroy";
+            font-size: 1.8rem;
+            font-weight: 300;
+            line-height: 2.7rem;
+            color: $dark;
+            margin: 0;   
+            @include breakpoint($sm-bp) {
+                font-size: 2.9rem;
+                line-height: 1.48;
+                max-width: 90%;
+            }     
+        }
+    }
+}
+
+.pop-up-vacancy__paragr {
+    font-family: "Gilroy";
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 2.7rem;
+    color: $dark;
+    margin: 0 0 2rem;
+    @include breakpoint($sm-bp) {
+        font-size: 2.88rem;
+        line-height: 1.5;
+        max-width: 92%;
+    }
+}
+
+.vacancy__mail-link {
+    color: $orange;
+    text-decoration: none;
+}
+
+.pop-up-vacancy__bottom-text {
+    font-family: "Gilroy";
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 2.7rem;
+    color: #27272E;
+    margin: 5rem 0 2rem 47.7%;
+    max-width: 37%;
+    @include breakpoint($sm-bp) {
+        font-size: 2.88rem;
+        line-height: 1.5;
+        margin: 8rem 0 4rem 0%;
+        max-width: 75%;
+    }
+}
+
+.pop-up-vacancy__line {
+    position: absolute;
+    left: 74%;
+    bottom: 8rem;
+    width: 12.5rem;
+    @include breakpoint($sm-bp) {
+        left: 59%;
+        bottom: 13rem;
+        width: 20.5rem;        
+    }
+}
+
+.pop-up-vacancy__img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 16.5rem;
+    @include breakpoint($sm-bp) {
+        width: 18.5rem;
+    }
+}
+
+.pop-up-vacancy__wrap {
+    display: grid;
+    max-height: calc(var(--h) * .75);
+    overflow-y: scroll;
+}
+
+.vacancy-block {
+    grid-row: 1/1;
+    grid-column: 1/1;
+    display: none;
+}
+
+.vacancy-block.show {
+    display: block;
+}

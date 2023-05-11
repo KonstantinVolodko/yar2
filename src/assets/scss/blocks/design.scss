@@ -1,0 +1,264 @@
+.design {
+    .intro__top {
+        margin-top: 7.5rem;
+        @include breakpoint($sm-bp) {
+            margin-top: 17.4rem;
+        }
+    }
+
+    .intro__main_btn {
+        margin-top: 8rem;
+    }
+
+    .intro__bottom {
+        align-self: flex-end;
+        margin-top: -17.4rem;
+        margin-right: 21rem;
+        @include breakpoint($sm-bp) {
+            margin-top: .6rem;
+            width: 100%;
+            margin-right: 0;
+        }
+    }
+
+    .intro__main_name {
+        margin-left: 0;
+    }
+    
+    .intro__main_text {
+        margin-left: 0;
+        @include breakpoint($sm-bp) {
+            margin-top: 5.1rem;            
+        }
+    }
+}
+
+.design.services-section {
+    padding-bottom: 20rem;
+    @include breakpoint($sm-bp) {
+        padding-bottom: 16rem;
+    }
+
+    .title-black {
+        padding-bottom: 3rem;
+    }
+
+    .services__text {
+        @include breakpoint($sm-bp) {
+            max-width: 98%;
+        }
+    }
+}
+
+.stages {
+    background: $dark;
+    padding-top: 20rem;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20rem;
+
+    @include breakpoint($mid-bp) {
+        flex-direction: column;
+    }
+    @include breakpoint($sm-bp) {
+        padding-top: 16rem;
+        padding-bottom: 13rem;
+    }
+
+    .title-black {
+        color: white;
+    }
+
+    .stages__list {
+        max-width: 40%;
+        padding: 0;
+        margin: 5rem 0 0;
+        padding-right: 3rem;
+        box-sizing: border-box;
+        @include breakpoint($mid-bp) {
+            max-width: 100%;
+        }
+        @include breakpoint($sm-bp) {
+            margin-top: 8rem;
+            padding-right: 0;
+        }
+    }
+
+    .stages_width {
+        max-width: 57.3%;
+
+        @include breakpoint($sm-bp) {
+            max-width: 100%;
+        }
+    }
+    
+
+    .stages__item {
+        list-style: none;
+        margin-bottom: 3rem;
+        position: relative;
+        @include breakpoint($sm-bp) {
+            margin-bottom: 4rem;
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 1px;
+            margin: 2.2rem 0 0;
+            background-image: linear-gradient(to right, #fff 40%, transparent 40%);
+            background-size: 20px 2px;
+            background-repeat: repeat-x;
+            @include breakpoint($sm-bp) {
+                margin-top: 4rem;
+                background-size: 11px 2px;
+            }
+        }
+    }
+
+    .condition-text {
+        font-weight: 300;
+        font-size: 1.8rem;
+        line-height: 150%;
+        color: #D0D0D6;
+        list-style: none;
+    }
+
+    .stages__item_underline {
+        &::after {
+            background-image: linear-gradient(to right, #fff 100%, transparent 40%);
+        }
+    }
+
+    .subtitle {
+        color: $orange;
+        display: flex;
+        align-items: center;
+        gap: 2.4rem;
+
+        @include breakpoint($sm-bp) {
+            justify-content: space-between;
+        }
+
+        span {
+            font-weight: 300;
+            font-size: 2.4rem;
+            line-height: 2.8rem;
+            text-align: right;
+            color: #D0D0D6;
+            text-transform: none;
+
+            @include breakpoint($sm-bp) {
+                font-size: 3.7rem;
+            }
+        }
+    }
+
+    .text-normal {
+        color: white;
+        margin: 0.5rem 0 0;
+        line-height: 1.5;
+        @include breakpoint($sm-bp) {
+            margin-top: 2rem;
+        }
+    }
+}
+
+
+.questions {
+    padding-top: 20rem;
+    padding-bottom: 20rem;
+    background: $dark;
+    @include breakpoint($sm-bp) {
+        padding-top: 16rem;
+        padding-bottom: 16rem;
+    }
+
+    .title-black {
+        color: white;
+    }
+}
+
+.questions__item_btn {
+    display: block;
+    width: 5rem;
+    height: 5rem;
+    background: url("../images/plus.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.questions__list {
+    margin: 5.4rem 0 0;
+    padding: 0;
+    @include breakpoint($sm-bp) {
+        margin-top: 8rem;
+    }
+}
+
+.questions__item {
+    list-style: none;
+    position: relative;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    padding-top: 2.8rem;
+    @include breakpoint($sm-bp) {
+        padding-top: 1.8rem;
+    }
+
+    .questions__item_btn {
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: opacity .4s;
+        @include breakpoint($sm-bp) {
+            right: 0;
+        }
+    }
+
+    .subtitle {
+        color: white;
+        padding-bottom: 2.3rem;
+        transition: .4s;
+        @include breakpoint($sm-bp) {
+            max-width: 92%;
+        }
+    }
+
+    .text-light {
+        color: white;
+        max-height: 0;
+        overflow: hidden;
+        transition: .4s;
+        max-width: 58%;
+        @include breakpoint($mid-bp) {
+            max-width: 86%;
+        }
+        @include breakpoint($sm-bp) {
+            max-width: 96%;
+        }
+    }
+}
+
+.questions__item.opened {
+    .subtitle {
+        color: $orange;
+        padding-top: 1.8rem;
+    }
+
+    .questions__item_btn {
+        opacity: 0;
+        @include breakpoint($sm-bp) {
+            background-image: url("../images/minus-mob.svg");
+            opacity: 1;
+            top: 6rem;
+        }
+    }
+
+    .text-light {
+        max-height: 100vh;
+        padding-bottom: 1.5rem;
+    }
+}

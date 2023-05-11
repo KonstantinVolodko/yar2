@@ -1,0 +1,87 @@
+.intro-404 {
+    background: $dark;
+    height: var(--h);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    @include breakpoint($sm-bp) {
+        padding-left: 0;
+        padding-right: 0;
+        align-items: flex-start;
+        padding-top: 17rem;
+    }
+
+    .intro__main {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+        @include breakpoint($sm-bp) {
+            flex-direction: column;
+        }
+
+        .intro__main_wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-left: 16rem;
+            padding-top: 5rem;
+            padding-bottom: 5.5rem;
+            @include breakpoint($sm-bp) {
+                margin-left: 0;
+                align-items: center;
+            }
+        }
+
+        .intro__main_btn.btn {
+            display: block;
+            margin-top: 9rem;
+            font-size: 3.7rem;
+            padding: 4rem 5.5rem;
+        }
+
+        .text-normal {
+            color: white;
+            @include breakpoint($sm-bp) {
+                text-align: center;
+                margin-top: 1rem;
+            }
+        }
+
+        .oops {
+            margin: 0;
+            color: white;
+            font-family: "Gilroy";
+            font-size: 6.4rem;
+            font-weight: 800;
+            line-height: 1.22;
+            letter-spacing: 0em;
+            text-align: left;
+            text-transform: uppercase;
+            @include breakpoint($sm-bp) {
+                text-align: center;
+            }
+        }
+
+        .intro__main_text {
+            margin-left: 0;
+            @include breakpoint($sm-bp) {
+                margin-top: 2.5rem;
+            }
+        }
+
+        img {
+            width: 79rem;
+            height: 49rem;
+            object-fit: contain;
+            object-position: center;
+            @include breakpoint($sm-bp) {
+                width: 100%;
+                height: unset;
+            }
+        }
+    }
+}

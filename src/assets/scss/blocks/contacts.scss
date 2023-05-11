@@ -1,0 +1,78 @@
+.request.contacts {
+    padding-top: 35rem;
+    align-items: center;
+    @include breakpoint($mid-bp) {
+        flex-direction: row;
+    }
+    @include breakpoint($sm-bp) {
+        flex-direction: column;
+        padding-top: 33rem;
+    }
+
+    .request__wrap {
+        width: 42%;
+        @include breakpoint($sm-bp) {
+            width: 100%;
+            margin-top: 8.5rem;
+        }
+    }
+    .request__col1 {
+        width: 50%;
+        @include breakpoint($sm-bp) {
+            width: 100%;
+        }
+
+        a {
+            font-family: "Gilroy";
+            font-size: 2.8rem;
+            font-weight: 800;
+            line-height: 1.214;
+            letter-spacing: 0em;
+            text-align: left;
+            color: $black;
+            text-transform: uppercase;
+            text-decoration: none;
+            display: block;
+            @include breakpoint($sm-bp) {
+                font-size: 3.28rem;
+            }
+        }
+        .request__address {
+            max-width: 38rem;
+            margin-bottom: 4rem;
+            @include breakpoint($sm-bp) {
+                max-width: 100%;
+            }
+        }
+        
+        .request__mail {
+            margin-top: 4rem;
+            text-transform: unset;
+            @include breakpoint($sm-bp) {
+               text-transform: uppercase;
+               margin-top: 4.4rem;
+            }
+        }
+    }
+
+    .title-black {
+        margin-bottom: 7.3rem;
+        @include breakpoint($sm-bp) {
+            margin-bottom: 7.6rem;
+        }
+    }
+
+    .request__form {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: unset;
+        margin-top: 2.5rem;
+
+        .btn {
+            margin-left: 0;
+            margin-top: 4rem;
+        }
+    }
+}
+
+

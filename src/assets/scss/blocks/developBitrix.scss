@@ -1,0 +1,59 @@
+.bitrixPartner {
+    padding-bottom: 10rem;
+
+    .bitrixPartner-content {
+        display: flex;
+        gap: 4rem;
+        align-items: center;
+
+        @include breakpoint($mid-bp) {
+            flex-direction: column;
+        }
+
+        p {
+            font-weight: 300;
+            font-size: 2.4rem;
+            line-height: 150%;
+            color: #27272E;
+
+            @include breakpoint($sm-bp) {
+                font-size: 2.87rem;
+            }
+        }
+    }
+
+    .bitrixPartner-content__imgContainer {
+        width: 75%;
+
+        @include breakpoint($mid-bp) {
+            width: 100%;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+}
+
+.bitrix-width {
+    width: 100% ;
+}
+
+.sertificats {
+    padding-bottom: 20rem;
+    
+    .sertificatsSwiper {
+        margin-top: 4rem;
+        overflow: hidden;
+
+        .swiper-slide {
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+}

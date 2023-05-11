@@ -1,0 +1,900 @@
+.development {
+    .intro__top {
+        margin-top: 9.5rem;
+        @include breakpoint($sm-bp) {
+            h2::after {
+                white-space: break-spaces;
+            }
+            margin-top: 17.4rem;
+        }
+    }
+
+    .intro__main_btn {
+        margin-top: 8rem;
+    }
+
+    .intro__bottom {
+        align-self: flex-end;
+        margin-top: -17.4rem;
+        @include breakpoint($sm-bp) {
+            margin-top: .6rem;
+            width: 100%;
+        }
+    }
+
+    .intro__main_name {
+        margin-left: 0;
+    }
+    
+    .intro__main_text {
+        margin-left: 0;
+        @include breakpoint($sm-bp) {
+            margin-top: 5.1rem;            
+        }
+    }
+}
+
+.scheme {
+    padding-top: 20rem;
+    padding-bottom: 22rem;
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    overflow: hidden;
+    @include breakpoint($sm-bp) {
+        padding-top: 16.4rem;
+        padding-bottom: 16rem;
+    }
+
+    &::before {
+        content: "";
+        grid-row: 1/1;
+        grid-column: 1/1;
+        position: absolute;
+        display: block;
+        background-image: url("../images/bottom-border.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: calc(100% - 47rem);
+        height: 100%;
+        top: 60%;
+        left: 23.5rem;
+        opacity: 0;
+        @include breakpoint($mid-bp) {
+            width: calc(100% - 40rem);
+            height: 100%;
+            top: 60%;
+            left: 20rem;
+        }
+        @include breakpoint($sm-bp) {
+            content: none;       
+        }
+    }
+    &::after {
+        content: "";
+        background-image: url("../images/circle-orange.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 2.4rem;
+        height: 2.4rem;
+        display: block;
+        position: absolute;
+        left: 23.5rem;
+        top: 58.5%;
+        transform: translateX(-50%);
+        opacity: 0;
+        @include breakpoint($mid-bp) {
+            width: 2rem;
+            height: 2rem;  
+            left: 20rem;  
+        }
+        @include breakpoint($mid-bp) {
+            content: none;
+        }
+    }
+}
+
+.scheme__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    @include breakpoint($sm-bp) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .title-black {
+        line-height: 1.2;
+    }
+    
+    .text-light {
+        margin: 0;
+        max-width: 42.8%;
+        font-size: 1.79rem;
+        line-height: 1.5;
+        @include breakpoint($sm-bp) {
+            margin: 4.4rem 0 0;
+            max-width: 100%;
+            font-size: 2.87rem;
+            line-height: 1.5;
+        }
+    }
+}
+
+.scheme__body {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16.22rem;
+    flex-wrap: wrap;
+    @include breakpoint($sm-bp) {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 4.3rem;
+        position: relative;
+    }
+    &::before {
+        @include breakpoint($sm-bp) {
+            content: "";
+            grid-row: 1/1;
+            grid-column: 1/1;
+            position: absolute;
+            display: block;
+            background-size: contain;
+            background-image: url("../images/border-side.svg");
+            background-repeat: no-repeat;
+            opacity: 0;
+            width: 36.3rem;
+            height: 100%;
+            top: 18.1rem;
+            left: 0;
+        }
+    }
+    &::after {
+        @include breakpoint($mid-bp) {
+            content: "";
+            background-image: url("../images/circle-orange.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 5rem;
+            height: 5rem;
+            display: block;
+            position: absolute;
+            left: 8rem;
+            top: 16rem;
+            transform: translateX(-50%);
+            opacity: 0;
+        }
+    }
+}
+
+.scheme__el {
+    width: 27rem;
+    height: 19rem;
+    display: grid;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 2;
+    transition: opacity .4s;
+    opacity: 0;
+    @include breakpoint($mid-bp) {
+        width: 20rem;
+        height: 17.5rem;
+    }
+    @include breakpoint($sm-bp) {
+        width: 42rem;
+        height: 33rem;
+        margin-bottom: 16.5rem;
+    }
+
+    &:nth-child(even) {
+        transform: translateY(7.5rem);
+        @include breakpoint($sm-bp) {
+            transform: unset;
+        }
+    }
+}
+
+.scheme__num {
+    font-family: "Gilroy";
+    font-size: 13.5rem;
+    line-height: 1;
+    font-weight: 800;
+    color: rgb(242, 242, 245);
+    grid-row: 1/1;
+    grid-column: 1/1;
+    margin: 0 2rem;
+    @include breakpoint($mid-bp) {
+        font-size: 10.5rem;
+        margin: 0 1rem;
+    }
+    @include breakpoint($sm-bp) {
+        font-size: 20.5rem;
+        margin: 1rem 4rem;
+    }
+}
+
+.scheme__text {
+    grid-row: 1/1;
+    grid-column: 1/1;
+    font-family: "Gilroy";
+    font-size: 2.4rem;
+    font-weight: 300;
+    line-height: 3.6rem;
+    color: $dark;
+    margin: 4rem 4rem;
+    @include breakpoint($mid-bp) {
+        margin: 3rem 2rem;
+    }
+    @include breakpoint($sm-bp) {
+        margin: 8rem 7rem 8rem 8rem;
+        font-size: 3.75rem;
+        line-height: 1.5;
+    }
+}
+
+.scheme__body_bottom {
+    width: 100%;
+    margin-top: 23.5rem;
+    display: flex;
+    padding-left: 29.5%;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding-right: 9%;
+    @include breakpoint($sm-bp) {
+        margin-top: -12rem;
+        flex-direction: row-reverse;
+        padding-left: 5rem;
+        padding-right: 0rem;    
+        align-items: flex-end;    
+    }
+
+    .scheme__body_bottom-text1 {
+        max-width: 67%;
+        text-align: center;
+        opacity: 0;
+        @include breakpoint($sm-bp) {
+            max-width: 49%;
+            line-height: 1.25;
+        }
+    }
+    .scheme__body_bottom-text2 {
+        text-align: right;
+        max-width: 12%;
+        opacity: 0;
+        @include breakpoint($mid-bp) {
+            max-width: 28%;
+        }
+        @include breakpoint($sm-bp) {
+            max-width: 50%;
+            margin-bottom: 3.5rem;
+        }
+    }
+}
+
+.scheme__el_wrap {
+    grid-row: 1/1;
+    grid-column: 1/1;
+    display: grid;
+    z-index: 3;
+    background: white;
+    border-radius: 1rem;    
+    border: 1px solid rgba(208, 208, 214, 1);
+    @include breakpoint($sm-bp) {
+        border-radius: 2rem;
+    }
+    &::before {
+        opacity: 0;
+    }
+}
+
+.scheme__el1 {
+    &::after {
+        content: "";
+        grid-row: 1/1;
+        grid-column: 1/1;
+        position: absolute;
+        display: block;
+        background-image: url("../images/scheme-border.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: calc(100% + calc(calc(var(--w) - 182rem) / 5));
+        height: 100%;
+        top: -5rem;
+        left: 50%;
+        z-index: 1;
+        @include breakpoint($mid-bp) {
+            width: calc(100% + calc(calc(var(--w) - 140rem) / 5));
+        }
+        @include breakpoint($sm-bp) {
+            background-image: url("../images/border-mob-side.svg");
+            top: 50%;
+            height: 27rem;
+            width: 36rem;
+        }
+    }
+    &::before {
+        content: "";
+        grid-row: 1/1;
+        grid-column: 1/1;
+        position: absolute;
+        display: block;
+        background: white;
+        width: 110%;
+        height: 100%;
+        top: -6rem;
+        left: 48%;
+        z-index: 2;
+        transition: transform .4s;
+        @include breakpoint($sm-bp) {
+            top: 35%;
+            left: 30%;
+        }
+    }
+}
+
+.scheme__el2 {
+
+    .scheme__el_wrap {
+        position: relative;
+        &::before {
+            content: "";
+            background-image: url("../images/circle-orange.svg");
+            background-size: contain;
+            background-repeat: no-repeat;    
+            width: 2.4rem;
+            height: 2.4rem;
+            display: block;
+            position: absolute;
+            left: 50%;
+            top: -3rem;
+            transform: translateX(-50%);
+            @include breakpoint($mid-bp) {
+                width: 2rem;
+                height: 2rem;    
+            }
+            @include breakpoint($sm-bp) {
+                width: 5rem;
+                height: 5rem;
+                top: -9rem;
+            }
+        }
+    }
+
+    &::after {
+        content: "";
+        grid-row: 1/1;
+        grid-column: 1/1;
+        position: absolute;
+        display: block;
+        background-image: url("../images/scheme-border.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: calc(100% + calc(calc(var(--w) - 182rem) / 5));
+        height: 100%;
+        bottom: -5rem;
+        left: 50%;
+        z-index: 1;
+        transform: rotate(180deg) scale(-1, 1);
+        @include breakpoint($mid-bp) {
+            width: calc(100% + calc(calc(var(--w) - 140rem) / 5));
+        }
+        @include breakpoint($sm-bp) {
+            background-image: url("../images/border-mob-side.svg");
+            top: 50%;
+            height: 27rem;
+            width: 36rem;
+            transform: unset;
+        }
+    }
+
+    &::before {
+        content: "";
+        grid-row: 1/1;
+        grid-column: 1/1;
+        position: absolute;
+        display: block;
+        background: white;
+        width: 110%;
+        height: 100%;
+        bottom: -6rem;
+        left: 48%;
+        z-index: 2;
+        @include breakpoint($sm-bp) {
+            top: 35%;
+            left: 30%;
+        }
+    }
+}
+
+.scheme__el3 {
+    .scheme__el_wrap {
+        position: relative;
+        &::before {
+            content: "";
+            background-image: url("../images/circle-orange.svg");
+            background-size: contain;
+            background-repeat: no-repeat;    
+            width: 2.4rem;
+            height: 2.4rem;
+            display: block;
+            position: absolute;
+            left: 50%;
+            bottom: -3rem;
+            transform: translateX(-50%);
+            @include breakpoint($mid-bp) {
+                width: 2rem;
+                height: 2rem;    
+            }
+            @include breakpoint($sm-bp) {
+                width: 5rem;
+                height: 5rem;
+                top: -9rem;
+            }
+        }
+    }
+
+    &::after {
+        content: "";
+        grid-row: 1/1;
+        grid-column: 1/1;
+        position: absolute;
+        display: block;
+        background-image: url("../images/scheme-border.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: calc(100% + calc(calc(var(--w) - 182rem) / 5));
+        height: 100%;
+        top: -5rem;
+        left: 50%;
+        z-index: 1;
+        @include breakpoint($mid-bp) {
+            width: calc(100% + calc(calc(var(--w) - 140rem) / 5));
+        }
+        @include breakpoint($sm-bp) {
+            background-image: url("../images/border-mob-side.svg");
+            top: 50%;
+            height: 27rem;
+            width: 36rem;
+        }
+    }
+    &::before {
+        content: "";
+        grid-row: 1/1;
+        grid-column: 1/1;
+        position: absolute;
+        display: block;
+        background: white;
+        width: 110%;
+        height: 100%;
+        top: -6rem;
+        left: 48%;
+        z-index: 2;
+        @include breakpoint($sm-bp) {
+            top: 35%;
+            left: 30%;
+        }
+    }
+}
+
+.scheme__el4 {
+    .scheme__el_wrap {
+        position: relative;
+        &::before {
+            content: "";
+            background-image: url("../images/circle-orange.svg");
+            background-size: contain;
+            background-repeat: no-repeat;    
+            width: 2.4rem;
+            height: 2.4rem;
+            display: block;
+            position: absolute;
+            left: 50%;
+            top: -3rem;
+            transform: translateX(-50%);
+            @include breakpoint($mid-bp) {
+                width: 2rem;
+                height: 2rem;    
+            }
+            @include breakpoint($sm-bp) {
+                width: 5rem;
+                height: 5rem;
+                top: -9rem;
+            }
+        }
+    }
+
+    &::after {
+        content: "";
+        grid-row: 1/1;
+        grid-column: 1/1;
+        position: absolute;
+        display: block;
+        background-image: url("../images/scheme-border.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: calc(100% + calc(calc(var(--w) - 182rem) / 5));
+        height: 100%;
+        bottom: -5rem;
+        left: 50%;
+        z-index: 1;
+        transform: rotate(180deg) scale(-1, 1);
+        @include breakpoint($mid-bp) {
+            width: calc(100% + calc(calc(var(--w) - 140rem) / 5));
+        }
+        @include breakpoint($sm-bp) {
+            background-image: url("../images/border-mob-side.svg");
+            top: 50%;
+            height: 27rem;
+            transform: unset;
+            width: 36rem;
+        }
+    }
+    &::before {
+        content: "";
+        grid-row: 1/1;
+        grid-column: 1/1;
+        position: absolute;
+        display: block;
+        background: white;
+        width: 110%;
+        height: 100%;
+        bottom: -6rem;
+        left: 48%;
+        z-index: 2;
+        @include breakpoint($sm-bp) {
+            top: 35%;
+            left: 30%;
+        }
+    }
+}
+
+.scheme__el5 {
+    .scheme__el_wrap {
+        position: relative;
+        &::before {
+            content: "";
+            background-image: url("../images/circle-orange.svg");
+            background-size: contain;
+            background-repeat: no-repeat;    
+            width: 2.4rem;
+            height: 2.4rem;
+            display: block;
+            position: absolute;
+            left: 50%;
+            bottom: -3rem;
+            transform: translateX(-50%);
+            @include breakpoint($mid-bp) {
+                width: 2rem;
+                height: 2rem;    
+            }
+            @include breakpoint($sm-bp) {
+                width: 5rem;
+                height: 5rem;
+                top: -9rem;
+            }
+        }
+    }
+
+    &::after {
+        content: "";
+        grid-row: 1/1;
+        grid-column: 1/1;
+        position: absolute;
+        display: block;
+        background-image: url("../images/scheme-border.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: calc(100% + calc(calc(var(--w) - 182rem) / 5));
+        height: 100%;
+        top: -5rem;
+        left: 50%;
+        z-index: 1;
+        @include breakpoint($mid-bp) {
+            width: calc(100% + calc(calc(var(--w) - 140rem) / 5));
+        }
+        @include breakpoint($sm-bp) {
+            background-image: url("../images/border-mob-side.svg");
+            top: 50%;
+            height: 27rem;
+            width: 36rem;
+        }
+    }
+    &::before {
+        content: "";
+        grid-row: 1/1;
+        grid-column: 1/1;
+        position: absolute;
+        display: block;
+        background: white;
+        width: 110%;
+        height: 100%;
+        top: -6rem;
+        left: 48%;
+        z-index: 2;
+        @include breakpoint($sm-bp) {
+            top: 35%;
+            left: 30%;
+        }
+    }
+}
+
+.scheme__el6 {
+    .scheme__el_wrap {
+        position: relative;
+        &::before {
+            content: "";
+            background-image: url("../images/circle-orange.svg");
+            background-size: contain;
+            background-repeat: no-repeat;    
+            width: 2.4rem;
+            height: 2.4rem;
+            display: block;
+            position: absolute;
+            left: 50%;
+            top: -3rem;
+            transform: translateX(-50%);
+            @include breakpoint($mid-bp) {
+                width: 2rem;
+                height: 2rem;    
+            }
+            @include breakpoint($sm-bp) {
+                width: 5rem;
+                height: 5rem;
+                top: -9rem;
+            }
+        }
+    }
+}
+
+.scheme.sch-scrolled {
+    &::before {
+        opacity: 1;
+        transition: opacity .4s 4.8s;
+        @include breakpoint($sm-bp) {
+            transition: unset;            
+        }
+    }
+    &::after {
+        opacity: 1;
+        transition: opacity .4s 5.2s;
+        @include breakpoint($sm-bp) {
+            transition: unset;            
+        }
+    }
+
+    .scheme__body {
+        &::before {
+            @include breakpoint($sm-bp) {
+                opacity: 1;
+                transition: opacity .4s 4.8s;
+            }
+        }
+        &::after {
+            @include breakpoint($sm-bp) {
+                opacity: 1;
+                transition: opacity .4s 5.2s;
+            }
+        }    
+    }
+
+    .scheme__body_bottom-text2 {
+        opacity: 1;
+        transition: opacity .6s 5.2s;
+    }
+
+    .scheme__body_bottom-text1 {
+        opacity: 1;
+        transition: opacity .6s 5.4s;
+    }
+    
+    .scheme__el1 {
+        opacity: 1;
+
+        &::before {
+            transform: translateX(111%);
+            opacity: 0;
+            transition: transform .4s .4s, opacity .1s .8s;
+            @include breakpoint($sm-bp) {
+                transform: translateY(111%);
+            }
+        }
+    }
+
+    .scheme__el2 {
+        opacity: 1;
+        transition: opacity .4s .8s;
+        .scheme__el_wrap {
+            &::before {
+                opacity: 1;
+                transition: opacity .4s .8s;
+            }
+        }
+    
+        &::before {
+            transform: translateX(111%);
+            opacity: 0;
+            transition: transform .4s 1.2s, opacity .1s 1.6s;
+            @include breakpoint($sm-bp) {
+                transform: translateY(111%);
+            }
+        }
+    }
+
+    .scheme__el3 {
+        opacity: 1;
+        transition: opacity .4s 1.6s;
+        .scheme__el_wrap {
+            &::before {
+                opacity: 1;
+                transition: opacity .4s 1.6s;
+            }
+        }
+
+        &::before {
+            opacity: 0;
+            transform: translateX(111%);
+            transition: transform .4s 2s, opacity .1s 2.4s;
+            @include breakpoint($sm-bp) {
+                transform: translateY(111%);
+            }
+        }
+    }
+
+    .scheme__el4 {
+        opacity: 1;
+        transition: opacity .4s 2.4s;
+        .scheme__el_wrap {
+            &::before {
+                opacity: 1;
+                transition: opacity .4s 2.4s;
+            }
+        }
+
+        &::before {
+            opacity: 0;
+            transform: translateX(111%);
+            transition: transform .4s 2.8s, opacity .1s 3.2s;
+            @include breakpoint($sm-bp) {
+                transform: translateY(111%);
+            }
+        }
+    }
+
+    .scheme__el5 {
+        opacity: 1;
+        transition: opacity .4s 3.2s;
+        .scheme__el_wrap {
+            &::before {
+                opacity: 1;
+                transition: opacity .4s 3.2s;
+            }
+        }
+
+        &::before {
+            opacity: 0;
+            transform: translateX(111%);
+            transition: transform .4s 3.6s, opacity .1s 4s;
+            @include breakpoint($sm-bp) {
+                transform: translateY(111%);
+            }
+        }
+    }
+
+    .scheme__el6 {
+        opacity: 1;
+        transition: opacity .4s 4s;
+        .scheme__el_wrap {
+            &::before {
+                opacity: 1;
+                transition: opacity .4s 4s;
+            }
+        }
+
+        &::before {
+            opacity: 0;
+            transform: translateX(111%);
+            transition: transform .4s 4.4s, opacity .1s 4.8s;
+            @include breakpoint($sm-bp) {
+                transform: translateY(111%);
+            }
+        }
+    }
+}
+
+.scheme__body.sch-scrolled {
+    &::before {
+        @include breakpoint($sm-bp) {
+            opacity: 1;
+            transition: opacity .4s .8s;
+        }
+    }
+    &::after {
+        @include breakpoint($sm-bp) {
+            opacity: 1;
+            transition: opacity .4s .8s;
+        }
+    }    
+}
+
+.scheme__body_bottom.sch-scrolled {
+    .scheme__body_bottom-text2 {
+        opacity: 1;
+        transition: opacity .6s .4s;
+    }
+    
+    .scheme__body_bottom-text1 {
+        opacity: 1;
+        transition: opacity .6s .8s;
+    }
+}
+
+.scheme__el.sch-scrolled {
+    opacity: 1;
+    transition: opacity .4s .2s;
+    .scheme__el_wrap {
+        @include breakpoint($sm-bp) {
+            &::before {
+                opacity: 1;
+                transition: opacity .4s .4s;
+            }
+        }
+    }
+
+    &::before {
+        @include breakpoint($sm-bp) {
+            opacity: 0;
+            transition: transform .4s .4s, opacity .1s .8s;    
+            transform: translateY(111%);
+        }
+    }
+}
+
+
+.dark.services-section {
+    padding-top: 20rem;
+    background: $dark;
+    margin-top: 0;
+    @include breakpoint($sm-bp) {
+        padding-bottom: 16rem;
+    }
+
+    .services {
+        margin: 0;
+    }
+
+    .btn-more {
+        &::after {
+            background-image: url("../images/arr-white.svg")
+        }
+    }
+
+    .title-black {
+        color: white;
+        padding-bottom: 3rem;
+    }
+
+    .services__text {
+        @include breakpoint($sm-bp) {
+            max-width: 98%;
+        }
+    }
+
+    .subtitle {
+        color: white;
+    }
+
+    .btn {
+        color: white;
+    }
+}
+
+
+.development.questions {
+    .questions__item.opened {
+        .questions__item_btn {
+            background-image: url("../images/minus-mob.svg");
+            opacity: 1;
+            top: 6rem;
+        }
+    }
+}
