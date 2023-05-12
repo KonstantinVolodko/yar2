@@ -520,18 +520,18 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }*/
 
-    let formBtn = document.querySelector(".footer__form_btn");
-    let popUpThanks = document.querySelector(".pop-up-thanks");
-    if (formBtn) {
-        formBtn.onclick = (e) => {
-            e.preventDefault();
-            popUpThanks.style.display = "flex";
-            scrollLock.disablePageScroll(popUpThanks);
-            setTimeout(() => {
-                popUpThanks.classList.add("show");
-            }, 100);
-        };
-    }
+    // let formBtn = document.querySelector(".footer__form_btn");
+    // let popUpThanks = document.querySelector(".pop-up-thanks");
+    // if (formBtn) {
+    //     formBtn.onclick = (e) => {
+    //         e.preventDefault();
+    //         popUpThanks.style.display = "flex";
+    //         scrollLock.disablePageScroll(popUpThanks);
+    //         setTimeout(() => {
+    //             popUpThanks.classList.add("show");
+    //         }, 100);
+    //     };
+    // }
 
     let vacancyItems = document.querySelectorAll(".vacances__item");
     let vacancyPopUp = document.querySelector(".pop-up-vacancy");

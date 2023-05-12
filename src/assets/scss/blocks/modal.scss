@@ -61,6 +61,7 @@
 
         input {
             margin-bottom: 1rem;
+            color: #27272E;
         }
 
         .modal-content__inpContainer {
@@ -69,6 +70,21 @@
             width: 88%;
             justify-content: center;
 
+            button {
+                background: none;
+                justify-content: center;
+                align-items: center;
+                color: #27272E;
+                margin-bottom: 2rem;
+
+                &::before {
+                    display: none;
+                }
+
+                &::after {
+                    display: none;
+                }
+            }
         }
     }
 }

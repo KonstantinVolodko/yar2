@@ -549,20 +549,18 @@ document.addEventListener("DOMContentLoaded", function () {
           };
       }
   }*/
-
-  var formBtn = document.querySelector(".footer__form_btn");
-  var popUpThanks = document.querySelector(".pop-up-thanks");
-
-  if (formBtn) {
-    formBtn.onclick = function (e) {
-      e.preventDefault();
-      popUpThanks.style.display = "flex";
-      scrollLock.disablePageScroll(popUpThanks);
-      setTimeout(function () {
-        popUpThanks.classList.add("show");
-      }, 100);
-    };
-  }
+  // let formBtn = document.querySelector(".footer__form_btn");
+  // let popUpThanks = document.querySelector(".pop-up-thanks");
+  // if (formBtn) {
+  //     formBtn.onclick = (e) => {
+  //         e.preventDefault();
+  //         popUpThanks.style.display = "flex";
+  //         scrollLock.disablePageScroll(popUpThanks);
+  //         setTimeout(() => {
+  //             popUpThanks.classList.add("show");
+  //         }, 100);
+  //     };
+  // }
 
   var vacancyItems = document.querySelectorAll(".vacances__item");
   var vacancyPopUp = document.querySelector(".pop-up-vacancy");

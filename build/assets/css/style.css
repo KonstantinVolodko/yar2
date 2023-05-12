@@ -6948,6 +6948,7 @@ input:hover, input:focus, input:active {
 
 .modal-content form input {
     margin-bottom: 1rem;
+    color: #27272E;
 }
 
 .modal-content form .modal-content__inpContainer {
@@ -6958,6 +6959,24 @@ input:hover, input:focus, input:active {
     width: 88%;
     -ms-flex-pack: center;
     justify-content: center;
+}
+
+.modal-content form .modal-content__inpContainer button {
+    background: none;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #27272E;
+    margin-bottom: 2rem;
+}
+
+.modal-content form .modal-content__inpContainer button::before {
+    display: none;
+}
+
+.modal-content form .modal-content__inpContainer button::after {
+    display: none;
 }
 
 @-webkit-keyframes animatetop {
@@ -7024,7 +7043,6 @@ body {
     margin: 0;
     padding: 0;
     position: relative;
-    overflow: hidden;
     overflow-x: hidden;
     scrollbar-width: none;
     -ms-overflow-style: none;
